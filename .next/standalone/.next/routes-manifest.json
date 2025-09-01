@@ -1,0 +1,192 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/404",
+      "regex": "^/404(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/404(?:/)?$"
+    },
+    {
+      "page": "/app",
+      "regex": "^/app(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app(?:/)?$"
+    },
+    {
+      "page": "/app/admin",
+      "regex": "^/app/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/admin(?:/)?$"
+    },
+    {
+      "page": "/app/admin/notes",
+      "regex": "^/app/admin/notes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/admin/notes(?:/)?$"
+    },
+    {
+      "page": "/app/admin/politics",
+      "regex": "^/app/admin/politics(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/admin/politics(?:/)?$"
+    },
+    {
+      "page": "/app/admin/users",
+      "regex": "^/app/admin/users(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/admin/users(?:/)?$"
+    },
+    {
+      "page": "/app/gallery",
+      "regex": "^/app/gallery(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/gallery(?:/)?$"
+    },
+    {
+      "page": "/app/gallery/upload-asset",
+      "regex": "^/app/gallery/upload\\-asset(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/gallery/upload\\-asset(?:/)?$"
+    },
+    {
+      "page": "/app/user/account",
+      "regex": "^/app/user/account(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/user/account(?:/)?$"
+    },
+    {
+      "page": "/app/user/account/pay",
+      "regex": "^/app/user/account/pay(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/user/account/pay(?:/)?$"
+    },
+    {
+      "page": "/app/user/delete-self",
+      "regex": "^/app/user/delete\\-self(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/app/user/delete\\-self(?:/)?$"
+    },
+    {
+      "page": "/connection-check",
+      "regex": "^/connection\\-check(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/connection\\-check(?:/)?$"
+    },
+    {
+      "page": "/pricing",
+      "regex": "^/pricing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/pricing(?:/)?$"
+    },
+    {
+      "page": "/user/login",
+      "regex": "^/user/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user/login(?:/)?$"
+    },
+    {
+      "page": "/user/register/identifier",
+      "regex": "^/user/register/identifier(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user/register/identifier(?:/)?$"
+    },
+    {
+      "page": "/user/register/password",
+      "regex": "^/user/register/password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/user/register/password(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/index\\.json$"
+    },
+    {
+      "page": "/app",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app\\.json$"
+    },
+    {
+      "page": "/app/gallery",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app/gallery\\.json$"
+    },
+    {
+      "page": "/app/gallery/upload-asset",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app/gallery/upload-asset\\.json$"
+    },
+    {
+      "page": "/app/user/account",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app/user/account\\.json$"
+    },
+    {
+      "page": "/app/user/account/pay",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app/user/account/pay\\.json$"
+    },
+    {
+      "page": "/app/user/delete-self",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/app/user/delete-self\\.json$"
+    },
+    {
+      "page": "/connection-check",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/connection-check\\.json$"
+    },
+    {
+      "page": "/pricing",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/pricing\\.json$"
+    },
+    {
+      "page": "/user/login",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/user/login\\.json$"
+    },
+    {
+      "page": "/user/register/identifier",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/user/register/identifier\\.json$"
+    },
+    {
+      "page": "/user/register/password",
+      "dataRouteRegex": "^/_next/data/LY97BXnZHok_TfX95MqpX/user/register/password\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

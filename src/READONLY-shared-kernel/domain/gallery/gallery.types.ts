@@ -1,0 +1,1 @@
+export type Trait = string

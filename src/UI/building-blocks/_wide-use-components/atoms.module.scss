@@ -1,0 +1,15 @@
+@use "../../styles/placeholders" as *;
+
+
+.buttonLink {
+  transition: filter 300ms ease;
+  filter: unset;
+}
+
+.disabledAnchor {
+  filter: saturate(0) brightness(3) contrast(0.5)
+}
+
+.goBackButton {
+  @extend %frozenGlass;
+}

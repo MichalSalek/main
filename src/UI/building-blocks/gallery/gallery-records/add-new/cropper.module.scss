@@ -1,0 +1,17 @@
+.previewImage {
+  max-width: 100%;
+  border: 1px solid #ccc;
+}
+
+.croppedImage {
+  max-width: 320px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.preview {
+  width: 100px;
+  height: auto;
+  aspect-ratio: 5 / 4;
+}
