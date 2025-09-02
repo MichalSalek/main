@@ -22,9 +22,7 @@ export const SessionInfoMolecule = () => {
     },
     [])
 
-  return <Stack>
-
-    <Stack
+  return <Stack
       sx={{
         flexDirection: 'row',
         justifyContent: 'flex-end',
@@ -50,6 +48,4 @@ export const SessionInfoMolecule = () => {
         </Button>
       </Stack>
     </Stack>
-
-  </Stack>
 }

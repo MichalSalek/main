@@ -5,18 +5,18 @@
   "/app/admin/notes": "pages/app/admin/notes.html",
   "/app/admin/politics": "pages/app/admin/politics.html",
   "/app/admin/users": "pages/app/admin/users.html",
-  "/_error": "pages/_error.js",
   "/app/gallery/upload-asset": "pages/app/gallery/upload-asset.js",
   "/_document": "pages/_document.js",
   "/app/user/account/pay": "pages/app/user/account/pay.js",
   "/app/gallery": "pages/app/gallery.js",
   "/app/user/account": "pages/app/user/account.js",
   "/connection-check": "pages/connection-check.js",
+  "/_error": "pages/_error.js",
   "/pricing": "pages/pricing.js",
   "/app": "pages/app.js",
-  "/": "pages/index.js",
   "/app/user/delete-self": "pages/app/user/delete-self.js",
+  "/": "pages/index.js",
   "/user/login": "pages/user/login.js",
-  "/user/register/password": "pages/user/register/password.js",
-  "/user/register/identifier": "pages/user/register/identifier.js"
+  "/user/register/identifier": "pages/user/register/identifier.js",
+  "/user/register/password": "pages/user/register/password.js"
 }

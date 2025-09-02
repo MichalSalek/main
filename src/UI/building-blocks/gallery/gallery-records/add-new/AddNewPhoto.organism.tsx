@@ -2,7 +2,7 @@ import {useCallback, useEffect, useRef, useState} from 'react';
 import {DefaultSize, ExtendedSettings, FixedCropper, FixedCropperRef, ImageRestriction} from 'react-advanced-cropper';
 import 'react-advanced-cropper/dist/style.css'
 import scss from './cropper.module.scss'
-import {Button, Modal, Stack, Step, StepContent, StepLabel, Stepper, Typography} from '@mui/material';
+import {Button, Stack, Step, StepContent, StepLabel, Stepper, Typography} from '@mui/material';
 import {STYLES_POLICY} from "../../../../../READONLY-shared-kernel/policies/styles.policy";
 import {useSetActonButtonsHook} from "../../../../application-hooks/useSetActonButtons.hook";
 // https://www.npmjs.com/package/react-advanced-cropper
@@ -66,8 +66,8 @@ const steps = [
 
 const defaultSize: DefaultSize<ExtendedSettings<{}>> = ({imageSize, visibleArea}) => {
   return {
-    width: (imageSize).width,
-    height: (imageSize).height,
+    width: visibleArea?.width || (imageSize).width,
+    height: visibleArea?.height || (imageSize).height,
   }
 }
 
@@ -94,6 +94,7 @@ export const AddNewPhotoOrganism = () => {
   const setLoadingIcon = useSetLoadingIcon()
 
   const setActionButtons = useSetActonButtonsHook()
+
 
   const onTurnOnCropperCallback = useCallback(() => {
     setCropperSwitched(true)
@@ -177,7 +178,6 @@ export const AddNewPhotoOrganism = () => {
             },
             async (response) => {
               memoizedResponseForErrorCase.current = null
-              void pushNewSnackbar('Poprawnie dodano zdjęcie do galerii!', 'success')
               setupProcessStep3()
             },
             async (error) => {
@@ -197,7 +197,6 @@ export const AddNewPhotoOrganism = () => {
                 },
                 async (response) => {
                   memoizedResponseForErrorCase.current = null
-                  void pushNewSnackbar('Poprawnie dodano zdjęcie do galerii!', 'success')
                   setupProcessStep3()
                 },
                 async (error) => {
@@ -299,21 +298,8 @@ export const AddNewPhotoOrganism = () => {
 
             </Stack>}
 
-        <Modal
-          disableEscapeKeyDown={true}
-          hideBackdrop={true}
-          disablePortal={true}
-          open={cropperSwitched}
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            width: '100%'
-          }}>
-
-          <Stack>
-            <Stack sx={{alignItems: 'center'}}>
-              <FixedCropper
+        {cropperSwitched &&
+            <FixedCropper
                 canvas={true}
                 ref={cropperRef}
                 src={loadedImageSrc}
@@ -329,14 +315,11 @@ export const AddNewPhotoOrganism = () => {
                   lines: true,
                   movable: false,
                   resizable: false,
-                  grid: true,
-
+                  grid: true
                 }}
                 imageRestriction={ImageRestriction.stencil}
-              />
-            </Stack>
-          </Stack>
-        </Modal>
+            />
+        }
       </Stack>
     )}
 

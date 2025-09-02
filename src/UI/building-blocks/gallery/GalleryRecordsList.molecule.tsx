@@ -26,10 +26,8 @@ const RECORDS_NUMBER_PER_PAGE = 4
 const NEXT_PAGE_TRIGGER_OFFSET_IN_PX = 1500
 
 const RowAtom = ({el, index}: { el: GalleryRecord, index: number }) => {
-  return <Box>
+  return <Box paddingBottom={STYLES_POLICY.spacing[5]}>
     <Card key={el.gallery_record_id} sx={{minWidth: '100%'}} variant={'elevation'}>
-
-      <Chip size={'small'} color={'primary'} label={index + 1} sx={{margin: STYLES_POLICY.spacing[2]}}/>
 
       <CardMedia>
         <img
@@ -59,7 +57,7 @@ const RowAtom = ({el, index}: { el: GalleryRecord, index: number }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" variant={'outlined'}>Zapisz</Button>
+        {/*<Button size="small" variant={'outlined'}>Zapisz</Button>*/}
       </CardActions>
 
     </Card>

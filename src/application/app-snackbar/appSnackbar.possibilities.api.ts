@@ -24,9 +24,10 @@ export const pushNewSnackbar = (input: string | EVENT_INFO_TYPE | undefined, col
     return void undefined
   }
 
-  if (APP_SNACKBAR_STATE.snackbarDebounceTimeID) {
+  if (APP_SNACKBAR_STATE.lastSnackbarMemo === input) {
     return void undefined
   }
+
 
   APP_SNACKBAR_STATE.snackbarDebounceTimeID = window?.setTimeout(() => {
 
@@ -34,11 +35,6 @@ export const pushNewSnackbar = (input: string | EVENT_INFO_TYPE | undefined, col
     APP_SNACKBAR_STATE.snackbarDebounceTimeID = 0
 
   }, SNACKBAR_DEBOUNCE_TIME)
-
-
-  if (APP_SNACKBAR_STATE.lastSnackbarMemo === input) {
-    return void undefined
-  }
 
   APP_SNACKBAR_STATE.lastSnackbarMemo = input
 

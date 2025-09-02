@@ -81,7 +81,7 @@ export const AccountOrganism = (): ReactElement => {
     <Stack>
       <Tabs
         variant="scrollable"
-        scrollButtons
+        scrollButtons="auto"
         value={tabIndex}
         onChange={handleChange}
         sx={{borderBottom: 1, borderColor: STYLES_POLICY.contourColor}}

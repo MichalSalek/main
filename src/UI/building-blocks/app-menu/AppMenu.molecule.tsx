@@ -34,8 +34,7 @@ export const AppMenuMolecule = (): ReactElement => {
 
       borderTop: `2px solid ${theme.palette.divider}`,
       justifyContent: 'space-between',
-      height: STYLES_POLICY.appBarDimension,
-
+      height: STYLES_POLICY.appBarDimension
     }}>
 
     <Container sx={{

@@ -103,8 +103,8 @@ export const EVENTS = Object.freeze({
     EVENT_LOG: [],
     GALLERY: ['ASSET_UPLOADED',
       'CANNOT_UPLOAD_ASSET',
-      'GALLERY_RECORD_ADDED',
-      'CANNOT_ADD_GALLERY_RECORD']
+      'GALLERY_RECORD_CREATED',
+      'CANNOT_CREATE_GALLERY_RECORD']
   }
 } as const)
 
