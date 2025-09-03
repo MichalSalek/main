@@ -1,14 +1,12 @@
 // @ts-ignore
-import dayjs          from 'dayjs'
+import dayjs from 'dayjs'
 // https://day.js.org/docs/en/query/is-same
 // @ts-ignore
-import isSameOrAfter  from 'dayjs/plugin/isSameOrAfter'
+import isSameOrAfter from 'dayjs/plugin/isSameOrAfter'
 // @ts-ignore
 import isSameOrBefore from 'dayjs/plugin/isSameOrBefore'
 // @ts-ignore
-import utc            from 'dayjs/plugin/utc'
-
-
+import utc from 'dayjs/plugin/utc'
 
 
 dayjs.extend(utc)

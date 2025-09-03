@@ -1,9 +1,7 @@
-import { IOClientFunctionReqResErr } from '../../application/http/http.client.types'
-import { DetailedErrorPayload }      from '../../application/http/http.types'
-import { Session, User }             from '../db_models'
-import { CurrentUser }               from '../user/user.types'
-
-
+import {IOClientFunctionReqResErr} from '../../application/http/http.client.types'
+import {DetailedErrorPayload} from '../../application/http/http.types'
+import {Session, User} from '../db_models'
+import {CurrentUser} from '../user/user.types'
 
 
 export type SESSION_DTO_API_V1 = {

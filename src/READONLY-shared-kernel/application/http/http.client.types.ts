@@ -1,6 +1,4 @@
-import { HTTPErrorCallback, HTTPSuccessCallback } from './http.types'
-
-
+import {HTTPErrorCallback, HTTPSuccessCallback} from './http.types'
 
 
 // @Req Request payload

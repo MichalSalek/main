@@ -1,10 +1,8 @@
-import { IDType }                    from '../../application/application.types'
-import { IOClientFunctionReqResErr } from '../../application/http/http.client.types'
-import { DetailedErrorPayload }      from '../../application/http/http.types'
-import { Account, PaymentStatus }    from '../db_models'
-import { CurrentUser }               from '../user/user.types'
-
-
+import {IDType} from '../../application/application.types'
+import {IOClientFunctionReqResErr} from '../../application/http/http.client.types'
+import {DetailedErrorPayload} from '../../application/http/http.types'
+import {Account, PaymentStatus} from '../db_models'
+import {CurrentUser} from '../user/user.types'
 
 
 export type ACCOUNT_DTO_API_V1 = {

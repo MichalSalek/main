@@ -1,11 +1,11 @@
 import {Box, Stack, Tab, Tabs, Typography} from '@mui/material'
-import {ReactElement, ReactNode, SyntheticEvent, useCallback, useEffect, useRef, useState} from 'react'
+import {ReactElement, ReactNode, SyntheticEvent, useCallback, useState} from 'react'
 import {useAppSelector} from '../../../application/store/store'
 import {getEventLogs_IO} from '../../../domain/event-log-actions/eventLogIO.possibilities.api'
 import {dateForUI} from '../../UI-utils/UI.utils.api'
 import {STORE_SEL_user_currentUser} from '../../../domain/user/user.read'
 import {ROUTES_FRONT} from '../../../READONLY-shared-kernel/domain/routing/routing.config'
-import {EventLog, EventLogTypeValue, Session} from '../../../READONLY-shared-kernel/models/db_models'
+import {EventLog, EventLogTypeValue} from '../../../READONLY-shared-kernel/models/db_models'
 import {LinkAtom} from '../_wide-use-components/Link.atom'
 import {PricingPlanWithPaymentMolecule} from '../pricing-plan/PricingPlanWithPayment.molecule'
 import {getPricingPlanUI} from "../pricing-plan/pricingPlanUI.api";
@@ -48,7 +48,6 @@ export const AccountOrganism = (): ReactElement => {
   const currentUser = useAppSelector(STORE_SEL_user_currentUser)
 
 
-
   const [accountEventLogs, setAccountEventLogs] = useState<EventLog[]>([])
 
 
@@ -67,7 +66,6 @@ export const AccountOrganism = (): ReactElement => {
 
 
   useFireOnMountHook(getEventLogsCallback)
-
 
 
   const [tabIndex, setTabIndex] = useState(0)

@@ -1,9 +1,9 @@
-import {Button, LinearProgress, Stack} from "@mui/material";
+import {Button, Stack} from "@mui/material";
 import {dateForUI, userAgentForUI} from "../../../UI-utils/UI.utils.api";
 import {useAppSelector} from "../../../../application/store/store";
 import {STORE_SEL_user_currentUser} from "../../../../domain/user/user.read";
 import {useLogoutUserHook} from "../../../application-hooks/useLogoutUser.hook";
-import {useCallback, useEffect, useRef, useState} from "react";
+import {useCallback, useState} from "react";
 import {EventLog, EventLogTypeValue, Session} from "../../../../READONLY-shared-kernel/models/db_models";
 import {
   deleteSessionAll_IO,

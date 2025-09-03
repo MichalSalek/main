@@ -1,7 +1,7 @@
+import * as React from "react";
 import {ReactNode, useCallback, useEffect, useState} from "react";
 import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
 import {Button, Stack, Typography} from "@mui/material";
-import * as React from "react";
 import {freezeThreadAndWait} from "@msalek/utils";
 
 type Props = {

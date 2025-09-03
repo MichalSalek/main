@@ -1,7 +1,5 @@
-import { EVENT_COMMANDS_AND_QUERIES_TYPE } from '../commands-and-queries/cqrs.types'
+import {EVENT_COMMANDS_AND_QUERIES_TYPE} from '../commands-and-queries/cqrs.types'
 import {CurrentUser} from "../../models/user/user.types";
-
-
 
 
 export type PermissionsCollection = EVENT_COMMANDS_AND_QUERIES_TYPE[]

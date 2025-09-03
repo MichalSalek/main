@@ -1,6 +1,4 @@
-import { EVENTS } from './cqrs.config'
-
-
+import {EVENTS} from './cqrs.config'
 
 
 type EVENTS_TYPES = keyof typeof EVENTS

@@ -9,7 +9,6 @@ import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.pol
 import scss from './atoms.module.scss'
 
 
-
 export const GoBackAtom = () => {
   const previousRoutesNames = useAppSelector(STORE_SEL_goBack_previousRoutes)
   const veryPreviousRouteName = previousRoutesNames[0]

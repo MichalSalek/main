@@ -1,10 +1,10 @@
 import {
   annualDiscountPercentageNumber,
   bestsellersValues,
-  defaultPricingPlanPeriod, PricingPlan,
+  defaultPricingPlanPeriod,
+  PricingPlan,
   pricingPlanDataPLN
 } from '../domain/pricing/pricing.config'
-import {Account} from "../models/db_models";
 
 
 export type PricingPlanTypes = 'monthly' | 'annual'

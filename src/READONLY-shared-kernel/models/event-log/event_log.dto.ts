@@ -1,8 +1,6 @@
-import { IOClientFunctionReqResErr } from '../../application/http/http.client.types'
-import { DetailedErrorPayload }      from '../../application/http/http.types'
-import { EventLog, EventLogType }    from '../db_models'
-
-
+import {IOClientFunctionReqResErr} from '../../application/http/http.client.types'
+import {DetailedErrorPayload} from '../../application/http/http.types'
+import {EventLog, EventLogType} from '../db_models'
 
 
 export type EVENT_LOG_DTO_API_V1 = {

@@ -1,5 +1,4 @@
 import {ReduxState} from "../store/store";
-import {GallerySliceData} from "../../domain/gallery/gallery.read";
 
 export type ScrollPositionSlice = {
   position?: number

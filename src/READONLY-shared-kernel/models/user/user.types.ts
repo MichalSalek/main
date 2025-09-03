@@ -1,6 +1,4 @@
-import { Session, User, UserNoSensitive, UserRelationsAll } from '../db_models'
-
-
+import {Session, User, UserNoSensitive, UserRelationsAll} from '../db_models'
 
 
 export type UserMetadata = {
@@ -11,7 +9,6 @@ export type UserMetadata = {
 }
 
 
-
 export type UserWithRelations = Pick<UserRelationsAll, 'account'> & User
 
 export type UserNoSensitiveWithRelations = Pick<UserRelationsAll, 'account'> & UserNoSensitive
@@ -20,7 +17,6 @@ export type UserNoSensitiveWithRelations = Pick<UserRelationsAll, 'account'> & U
 export type UserWithRelationsExtended = Pick<UserRelationsAll, 'account' | 'sessions'> & User
 
 export type UserNoSensitiveWithRelationsExtended = Pick<UserRelationsAll, 'account' | 'sessions'> & UserNoSensitive
-
 
 
 export type CurrentUser = UserNoSensitiveWithRelations & Record<'session', Session>

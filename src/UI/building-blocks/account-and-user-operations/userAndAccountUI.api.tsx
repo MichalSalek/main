@@ -1,7 +1,8 @@
-import {ReactElement} from 'react'
 import {
   AccountStatus,
-  AccountStatusValueFlipped, PaymentStatus, PaymentStatusValueFlipped,
+  AccountStatusValueFlipped,
+  PaymentStatus,
+  PaymentStatusValueFlipped,
   Role,
   RoleValueFlipped
 } from "../../../READONLY-shared-kernel/models/db_models";

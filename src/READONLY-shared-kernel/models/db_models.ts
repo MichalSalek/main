@@ -5,9 +5,6 @@ import {objectFlip, ValueOf} from "../application/application.utils";
 import {PricingPlan} from "../domain/pricing/pricing.config";
 
 
-
-
-
 export const RoleValue = Object.freeze({
   NOT_LOGGED_IN: 1,
   USER_LEVEL_1: 2,

@@ -1,6 +1,4 @@
-import { EVENT_INFO_TYPE } from '../../domain/commands-and-queries/cqrs.types'
-
-
+import {EVENT_INFO_TYPE} from '../../domain/commands-and-queries/cqrs.types'
 
 
 export type InfoEventWithPayloadDTO<DataPayload = unknown> = {
@@ -9,17 +7,14 @@ export type InfoEventWithPayloadDTO<DataPayload = unknown> = {
 }
 
 
-
 export type HTTPError<ErrorPayload> = InfoEventWithPayloadDTO<ErrorPayload | undefined>
 
 export type HTTPSuccess<ResPayload> = InfoEventWithPayloadDTO<ResPayload>
 
 
-
 export type HTTPErrorCallback<ErrorPayload> = (error: HTTPError<ErrorPayload>) => Promise<void>
 
 export type HTTPSuccessCallback<ResPayload> = (response: HTTPSuccess<ResPayload>) => Promise<void>
-
 
 
 export type DetailedErrorGeneric = {

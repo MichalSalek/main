@@ -1,16 +1,4 @@
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Chip,
-  Fab,
-  Stack,
-  Typography,
-  Zoom
-} from "@mui/material";
+import {Box, Card, CardActions, CardContent, CardMedia, Fab, Stack, Typography, Zoom} from "@mui/material";
 import {FilterSelectedValuesAtom} from "../admin/user-list/user-list-filters/generics/FilterSelectedValues.atom";
 import {GalleryRecord} from "../../../READONLY-shared-kernel/models/db_models";
 import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";

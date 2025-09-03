@@ -23,29 +23,29 @@ export const SessionInfoMolecule = () => {
     [])
 
   return <Stack
-      sx={{
-        flexDirection: 'row',
-        justifyContent: 'flex-end',
-        gap: STYLES_POLICY.spacing[1],
-        alignItems: 'center',
-        textAlign: 'right',
-        visibility: currentUser?.user_id
-          ? 'visible'
-          : 'hidden'
-      }}>
-      <Stack>
-        <Typography variant={'caption'}>Twoja sesja wygaśnie</Typography>
-        <Typography variant={'caption'}>{dateForUI(currentUser?.session?.expires_at)} </Typography>
-      </Stack>
-      <Stack>
-        <Button
-          size={'small'}
-          sx={{fontSize: STYLES_POLICY.fontSize[0]}}
-          variant={'outlined'}
-          onClick={refreshSessionCallback}
-          color={'inherit'}>
-          Przedłuż
-        </Button>
-      </Stack>
+    sx={{
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      gap: STYLES_POLICY.spacing[1],
+      alignItems: 'center',
+      textAlign: 'right',
+      visibility: currentUser?.user_id
+        ? 'visible'
+        : 'hidden'
+    }}>
+    <Stack>
+      <Typography variant={'caption'}>Twoja sesja wygaśnie</Typography>
+      <Typography variant={'caption'}>{dateForUI(currentUser?.session?.expires_at)} </Typography>
     </Stack>
+    <Stack>
+      <Button
+        size={'small'}
+        sx={{fontSize: STYLES_POLICY.fontSize[0]}}
+        variant={'outlined'}
+        onClick={refreshSessionCallback}
+        color={'inherit'}>
+        Przedłuż
+      </Button>
+    </Stack>
+  </Stack>
 }

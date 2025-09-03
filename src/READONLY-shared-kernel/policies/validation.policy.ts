@@ -348,7 +348,7 @@ export const VALIDATION_POLICY = {
         returnObject.traits += 'Add at least one trait. '
       }
 
-      if ( data.color_traits.length === 0) {
+      if (data.color_traits.length === 0) {
         returnObject.color_traits += 'Add at least one color trait. '
       }
 
@@ -369,7 +369,7 @@ export const VALIDATION_POLICY = {
         gallery_record_id: ''
       }
 
-      if (!Array.isArray(data.asset_traits) ) {
+      if (!Array.isArray(data.asset_traits)) {
         returnObject.asset_traits += 'Wrong payload type. Required array. '
       }
 

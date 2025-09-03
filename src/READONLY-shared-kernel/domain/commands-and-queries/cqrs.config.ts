@@ -29,7 +29,7 @@ export const EVENTS = Object.freeze({
     EVENT_LOG: [],
     GALLERY: ['GALLERY_CREATE_TRAIT',
       'CREATE_GALLERY_RECORD',
-    'DELETE_ASSET_FROM_VENDOR']
+      'DELETE_ASSET_FROM_VENDOR']
   },
 
   QUERIES: {
@@ -44,7 +44,6 @@ export const EVENTS = Object.freeze({
     GALLERY: ['GET_GALLERY_RECORDS',
       'GET_GALLERY_CONFIG']
   },
-
 
 
   INFO: {

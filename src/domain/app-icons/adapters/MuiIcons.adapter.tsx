@@ -29,7 +29,6 @@ import FilterAltTwoToneIcon from '@mui/icons-material/FilterAltTwoTone';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 
 
-
 export const getAppIcon = Object.freeze({
 
   Back: (props?: SvgIconOwnProps) => <ArrowBackIosNewRoundedIcon {...props}/>,

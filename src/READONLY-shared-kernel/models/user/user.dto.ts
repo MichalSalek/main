@@ -1,9 +1,7 @@
-import { IOClientFunctionReqResErr } from '../../application/http/http.client.types'
-import { DetailedErrorPayload }      from '../../application/http/http.types'
-import { User, UserNoSensitive }     from '../db_models'
-import { CurrentUser, UserNoSensitiveWithRelationsExtended } from './user.types'
-
-
+import {IOClientFunctionReqResErr} from '../../application/http/http.client.types'
+import {DetailedErrorPayload} from '../../application/http/http.types'
+import {User, UserNoSensitive} from '../db_models'
+import {CurrentUser, UserNoSensitiveWithRelationsExtended} from './user.types'
 
 
 export type USER_DTO_API_V1 = {
