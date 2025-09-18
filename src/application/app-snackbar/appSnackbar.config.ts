@@ -1,0 +1,7 @@
+export const SNACKBAR_TIMEOUT = 8000
+
+export const SNACKBAR_MAX_SNACKS = 5
+
+export const REMEMBER_LAST_XX_SNACKBARS = 20
+
+export const SNACKBAR_DEBOUNCE_TIME = 1000

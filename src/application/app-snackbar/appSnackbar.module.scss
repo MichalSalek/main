@@ -1,0 +1,52 @@
+@use "../../UI/styles/placeholders" as *;
+
+
+.appSnackbarContainerRootStyle {
+  right: 0px !important;
+  top: 0px !important;
+
+  > div > div { // notistack-CollapseWrapper
+    padding: 0px !important;
+  }
+}
+
+.appSnackbarRootStyle {
+  min-width: 100% !important;
+  width: 100% !important;
+
+
+  button, div {
+    font-size: 10px;
+  }
+
+  button {
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+
+  > div { // .notistack-MuiContent
+
+    padding: 0px 5px 0px 0px !important;
+    border-radius: 0px !important;
+    margin: 10px 5px;
+
+
+    > div { // #notistack-snackbar
+
+      padding: 3px 6px;
+
+    }
+  }
+
+}
+
+
+.sonnerRoot {
+  li {
+    @extend %frozenGlass;
+
+    transition-duration: 350ms;
+    transition-timing-function: linear(0, 1 37.8%, 0.883 44.2%, 0.855 47.1%, 0.846 50%, 0.853 52.7%, 0.875 55.5%, 1 65.5%, 0.967 69.4%, 0.957 73.1%, 0.964 76.5%, 1 84.5%, 0.993 89.3%, 1)
+  }
+}
