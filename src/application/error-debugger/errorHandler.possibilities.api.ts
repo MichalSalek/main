@@ -4,7 +4,7 @@ import {SendToErrorTracker, sendToErrorTracker} from './errorTracker.possibiliti
 
 
 type Payload = string | Error | object | unknown | undefined
-type Mode = 'log' | 'warn' | 'error'
+type Mode = 'info' | 'warn' | 'error'
 export const reportIssue = (title: string, payload: Payload, mode: Mode = 'error'): void => {
   const dateNow = getDateNowInString()
   const issuePrefix = `[ ${mode.toUpperCase()} ${dateNow} ] `
@@ -18,7 +18,8 @@ export const reportIssue = (title: string, payload: Payload, mode: Mode = 'error
   if (IS_PRODUCTION_ENV()) {
     const errorTrackerPayload: SendToErrorTracker = {
       message: issuePrefix + title,
-      payload
+      payload,
+      mode
     }
     sendToErrorTracker(errorTrackerPayload)
   }

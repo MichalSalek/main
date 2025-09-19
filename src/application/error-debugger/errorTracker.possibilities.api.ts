@@ -2,21 +2,22 @@ import * as Sentry from '@sentry/nextjs'
 
 
 type Payload = string | Error | object | unknown | undefined
-
+type Mode = 'info' | 'warn' | 'error'
 export type SendToErrorTracker = {
   message: string
   payload: Payload
+  mode: Mode
 }
 
-export const sendToErrorTracker = (payload: SendToErrorTracker) => {
+export const sendToErrorTracker = (props: SendToErrorTracker) => {
 
   let errorPayload = {}
 
-  if (typeof payload.payload === 'object' && payload.payload !== null) {
-    errorPayload = payload.payload
+  if (typeof props.payload === 'object' && props.payload !== null) {
+    errorPayload = props.payload
   } else {
-    errorPayload = JSON.stringify(payload.payload)
+    errorPayload = JSON.stringify(props.payload)
   }
 
-  Sentry.logger.error(payload.message, errorPayload)
+  Sentry.logger[props.mode](props.message, errorPayload)
 }
