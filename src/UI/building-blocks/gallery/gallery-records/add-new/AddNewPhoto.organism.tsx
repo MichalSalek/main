@@ -31,7 +31,6 @@ import {
 } from "../../../../../domain/gallery/galleryIO.possibilities.api";
 import {useAppSelector} from "../../../../../application/store/store";
 import {STORE_SEL_user_currentUser} from "../../../../../domain/user/user.read";
-import {getEnvironmentMode} from "../../../../../application/environment/environment.utils.api";
 import {pushNewSnackbar} from "../../../../../application/app-snackbar/appSnackbar.possibilities.api";
 import {Trait} from "../../../../../READONLY-shared-kernel/domain/gallery/gallery.types";
 import {CloudinaryType} from "../../../../../domain/gallery/cloudinary-adapter/cloudinary.types";

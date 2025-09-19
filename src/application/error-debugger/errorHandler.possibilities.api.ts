@@ -13,9 +13,9 @@ export const reportIssue = (title: string, payload: Payload, mode: Mode = 'error
     console[mode]([issuePrefix,
       title,
       payload])
-  }
 
-  if (IS_PRODUCTION_ENV()) {
+  } else {
+
     const errorTrackerPayload: SendToErrorTracker = {
       message: issuePrefix + title,
       payload,
@@ -23,5 +23,4 @@ export const reportIssue = (title: string, payload: Payload, mode: Mode = 'error
     }
     sendToErrorTracker(errorTrackerPayload)
   }
-
 }
