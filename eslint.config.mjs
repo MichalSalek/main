@@ -17,8 +17,7 @@ export default defineConfig([
         extends: compat.extends('next', 'next/core-web-vitals', 'prettier'),
         rules: {
             semi: ['off', 'always'],
-            quotes: ['error', 'single'],
-            sortKeys: 'error'
+            quotes: ['error', 'single']
         },
         files: ['**/*.ts', '**/*.tsx'],
     }])
