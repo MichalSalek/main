@@ -19,7 +19,7 @@ declare global {
   }
 }
 
-if (IS_DEVELOPMENT_ENV()) {
+if (!IS_PRODUCTION_ENV()) {
   typeof window !== 'undefined' && (
     () => {
       window.ENV_VARS = ENV_VARS
