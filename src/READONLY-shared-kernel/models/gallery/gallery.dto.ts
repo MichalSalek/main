@@ -1,7 +1,7 @@
 import {IOClientFunctionReqResErr} from '../../application/http/http.client.types'
 import {DetailedErrorPayload} from '../../application/http/http.types'
-import {Trait} from "../../domain/gallery/gallery.types";
-import {GalleryConfig, GalleryRecord} from "../db_models";
+import {Trait} from '../../domain/gallery/gallery.types';
+import {GalleryConfig, GalleryRecord} from '../db_models';
 
 
 export type GALLERY_DTO_API_V1 = {

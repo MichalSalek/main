@@ -11,20 +11,20 @@ import {
 } from '@mui/material'
 import * as React from 'react'
 import {CSSProperties, ReactElement} from 'react'
-import {useAppSelector} from "../../../../application/store/store";
-import {STORE_SEL_user_currentUser} from "../../../../domain/user/user.read";
-import {useLogoutUserHook} from "../../../application-hooks/useLogoutUser.hook";
-import {PERMISSIONS_POLICY} from "../../../../READONLY-shared-kernel/policies/permissions.policy";
-import {DrawerToggleMenu} from "./drawer.types";
-import {ROUTES_FRONT} from "../../../../READONLY-shared-kernel/domain/routing/routing.config";
-import {LinkAtom} from "../../_wide-use-components/Link.atom";
-import {SessionInfoMolecule} from "../../_wide-use-components/SessionInfo.molecule";
-import {useAppRefreshHook} from "../../../application-hooks/useAppRefresh.hook";
-import {useReturnBackBecomeUserHook} from "../../../application-hooks/useReturnBackBecomeUser.hook";
+import {useAppSelector} from '../../../../application/store/store';
+import {STORE_SEL_user_currentUser} from '../../../../domain/user/user.read';
+import {useLogoutUserHook} from '../../../application-hooks/useLogoutUser.hook';
+import {PERMISSIONS_POLICY} from '../../../../READONLY-shared-kernel/policies/permissions.policy';
+import {DrawerToggleMenu} from './drawer.types';
+import {ROUTES_FRONT} from '../../../../READONLY-shared-kernel/domain/routing/routing.config';
+import {LinkAtom} from '../../_wide-use-components/Link.atom';
+import {SessionInfoMolecule} from '../../_wide-use-components/SessionInfo.molecule';
+import {useAppRefreshHook} from '../../../application-hooks/useAppRefresh.hook';
+import {useReturnBackBecomeUserHook} from '../../../application-hooks/useReturnBackBecomeUser.hook';
 
-import {STYLES_POLICY} from "../../../../READONLY-shared-kernel/policies/styles.policy";
-import {getAppIcon} from "../../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {USER_POLICY} from "../../../../READONLY-shared-kernel/policies/user.policy";
+import {STYLES_POLICY} from '../../../../READONLY-shared-kernel/policies/styles.policy';
+import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {USER_POLICY} from '../../../../READONLY-shared-kernel/policies/user.policy';
 
 
 const clickableElementCss: CSSProperties = {

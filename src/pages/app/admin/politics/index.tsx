@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material'
-import {PolicyOrganism} from "../../../../UI/building-blocks/admin/Policy.organism";
+import {PolicyOrganism} from '../../../../UI/building-blocks/admin/Policy.organism';
 
 export default function Index() {
 

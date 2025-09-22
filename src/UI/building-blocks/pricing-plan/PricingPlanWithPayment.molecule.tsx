@@ -1,7 +1,7 @@
 import {Button, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, Stack, Typography} from '@mui/material'
 import {ReactElement, useCallback, useEffect, useMemo, useState} from 'react'
 import {useAppSelector} from '../../../application/store/store'
-import {makePayment_IO} from '../../../domain/account-management/accountManagementIO.possibilities.api'
+import {makePayment_IO} from '../../../domain/account/accountIO.possibilities.api'
 import {redirectToAction} from '../../../domain/redirections-and-routing/redirections.operations.api'
 import {STORE_SEL_user_currentUser} from '../../../domain/user/user.read'
 import {ROUTES_FRONT_APP} from '../../../READONLY-shared-kernel/domain/routing/routing.config'
@@ -9,9 +9,9 @@ import {PRICING_POLICY} from '../../../READONLY-shared-kernel/policies/pricing.p
 import {USER_POLICY} from '../../../READONLY-shared-kernel/policies/user.policy'
 import {getPricingPlanUI} from './pricingPlanUI.api'
 import {usePricingPlanData} from './usePricingPlanData.hook'
-import {DataPassedBetweenViewsConfig} from "../../../application/data-between-views/dataBetweenViews.config";
-import {deleteFromClientStorage} from "../../../application/client-device-storage/clientStorage.possibilities.api";
-import {useFireOnMountHook} from "@msalek/utils";
+import {DataPassedBetweenViewsConfig} from '../../../application/data-between-views/dataBetweenViews.config';
+import {deleteFromClientStorage} from '../../../application/client-device-storage/clientStorage.possibilities.api';
+import {useFireOnMountHook} from '@msalek/utils';
 
 
 export const PricingPlanWithPaymentMolecule = (): ReactElement => {

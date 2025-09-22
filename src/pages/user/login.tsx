@@ -5,10 +5,10 @@ import {redirectToAction} from '../../domain/redirections-and-routing/redirectio
 import {loginUser_IO} from '../../domain/user/userIO.possibilities.api'
 import {ROUTES_FRONT} from '../../READONLY-shared-kernel/domain/routing/routing.config'
 import {EmailInputAtom} from '../../UI/building-blocks/_wide-use-components/EmailInput.atom'
-import {ConditionalButtonAtom} from "../../UI/building-blocks/_wide-use-components/ConditionalButton.atom";
-import {VALIDATION_POLICY} from "../../READONLY-shared-kernel/policies/validation.policy";
-import {setToClientStorage} from "../../application/client-device-storage/clientStorage.possibilities.api";
-import {MASTER_ADMIN_EMAIL} from "../../READONLY-shared-kernel/domain/admin/admin.config";
+import {ConditionalButtonAtom} from '../../UI/building-blocks/_wide-use-components/ConditionalButton.atom';
+import {VALIDATION_POLICY} from '../../READONLY-shared-kernel/policies/validation.policy';
+import {setToClientStorage} from '../../application/client-device-storage/clientStorage.possibilities.api';
+import {MASTER_ADMIN_EMAIL} from '../../READONLY-shared-kernel/domain/admin/admin.config';
 
 
 export default function Login() {

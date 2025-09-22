@@ -15,9 +15,9 @@ import {
 } from '../../READONLY-shared-kernel/application/http/http.types'
 import {CUSTOM_HEADERS, HTTPStatus} from '../../READONLY-shared-kernel/domain/http/http.config'
 import {ROUTING_POLICY} from '../../READONLY-shared-kernel/policies/routing.policy'
-import {CLEAR_THIS_HEADER_COMMAND_VALUE} from "../../READONLY-shared-kernel/application/http/http.config";
-import {pushEventToBus} from "../../application/event-bus/eventBus.possibilities.api";
-import {SnackbarWrapper} from "../../application/app-snackbar/appSnackbar.types";
+import {CLEAR_THIS_HEADER_COMMAND_VALUE} from '../../READONLY-shared-kernel/application/http/http.config';
+import {pushEventToBus} from '../../application/event-bus/eventBus.possibilities.api';
+import {SnackbarWrapper} from '../../application/app-snackbar/appSnackbar.types';
 
 
 type OnEveryCallHeadersInterceptor = {

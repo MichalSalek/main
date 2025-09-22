@@ -1,11 +1,11 @@
 import {Box, Container, Stack} from '@mui/material'
 import {ReactElement} from 'react'
-import {BusyAppLoaderComposition} from "./loaders/BusyAppLoader.composition";
-import {ViewLoaderComposition} from "./loaders/ViewLoader.composition";
-import {StaticPagesFooterMolecule} from "../building-blocks/headers-and-footers/StaticPagesFooter.molecule";
-import {HeaderMolecule} from "../building-blocks/headers-and-footers/Header.molecule";
-import {STYLES_POLICY} from "../../READONLY-shared-kernel/policies/styles.policy";
-import {GoBackAtom} from "../building-blocks/_wide-use-components/GoBack.atom";
+import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
+import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
+import {StaticPagesFooterMolecule} from '../building-blocks/headers-and-footers/StaticPagesFooter.molecule';
+import {HeaderMolecule} from '../building-blocks/headers-and-footers/Header.molecule';
+import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
+import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
 
 
 type Props = {

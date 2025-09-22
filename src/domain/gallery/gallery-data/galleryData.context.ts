@@ -1,5 +1,5 @@
-import {createContext} from "react";
-import {GalleryRecord} from "../../../READONLY-shared-kernel/models/db_models";
+import {createContext} from 'react';
+import {GalleryRecord} from '../../../READONLY-shared-kernel/models/db_models';
 
 
 export type GalleryDataContextType = {

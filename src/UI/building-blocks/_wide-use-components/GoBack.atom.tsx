@@ -1,11 +1,11 @@
-import {Box, Button, Typography} from "@mui/material";
-import {useCallback, useEffect, useState} from "react";
-import {useAppSelector} from "../../../application/store/store";
-import {STORE_SEL_goBack_previousRoutes} from "../../../application/go-back-UI-action/goBack.read";
-import {redirectToAction} from "../../../domain/redirections-and-routing/redirections.operations.api";
-import {ROUTING_POLICY} from "../../../READONLY-shared-kernel/policies/routing.policy";
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
+import {Box, Button, Typography} from '@mui/material';
+import {useCallback, useEffect, useState} from 'react';
+import {useAppSelector} from '../../../application/store/store';
+import {STORE_SEL_goBack_previousRoutes} from '../../../application/go-back-UI-action/goBack.read';
+import {redirectToAction} from '../../../domain/redirections-and-routing/redirections.operations.api';
+import {ROUTING_POLICY} from '../../../READONLY-shared-kernel/policies/routing.policy';
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
 import scss from './atoms.module.scss'
 
 

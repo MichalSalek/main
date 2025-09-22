@@ -8,11 +8,11 @@ import {registerUser_IO} from '../../../domain/user/userIO.possibilities.api'
 import {ROUTES_FRONT} from '../../../READONLY-shared-kernel/domain/routing/routing.config'
 import {User} from '../../../READONLY-shared-kernel/models/db_models'
 import {EmailInputAtom} from '../../../UI/building-blocks/_wide-use-components/EmailInput.atom'
-import {VALIDATION_POLICY} from "../../../READONLY-shared-kernel/policies/validation.policy";
+import {VALIDATION_POLICY} from '../../../READONLY-shared-kernel/policies/validation.policy';
 import {
   deleteFromClientStorage,
   getFromClientStorage
-} from "../../../application/client-device-storage/clientStorage.possibilities.api";
+} from '../../../application/client-device-storage/clientStorage.possibilities.api';
 
 
 export default function Register() {

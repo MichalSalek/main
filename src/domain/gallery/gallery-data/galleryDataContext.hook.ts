@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {GalleryDataContextType} from "./galleryData.context";
+import {GalleryDataContextType} from './galleryData.context';
 
 
 export const useGalleryDataContext = (): GalleryDataContextType => {

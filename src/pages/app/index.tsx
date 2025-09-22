@@ -4,8 +4,8 @@ import {STORE_SEL_user_currentUser} from '../../domain/user/user.read'
 import {ROUTES_FRONT} from '../../READONLY-shared-kernel/domain/routing/routing.config'
 import {USER_POLICY} from '../../READONLY-shared-kernel/policies/user.policy'
 import {LinkAtom} from '../../UI/building-blocks/_wide-use-components/Link.atom'
-import {getEnvironmentMode} from "../../application/environment/environment.utils.api";
-import {getRoleUI} from "../../UI/building-blocks/account-and-user-operations/userAndAccountUI.api";
+import {getEnvironmentMode} from '../../application/environment/environment.utils.api';
+import {getRoleUI} from '../../UI/building-blocks/account-and-user-operations/userAndAccountUI.api';
 
 
 export default function Home() {

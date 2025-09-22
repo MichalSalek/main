@@ -7,7 +7,7 @@ import {
 import {EVENTS_POLICY} from '../../policies/events.policy'
 import {PERMISSIONS_POLICY_TYPE} from '../../policies/permissions.policy'
 import {ROUTES_FRONT, ROUTES_FRONT_STATIC} from '../routing/routing.config'
-import {ROUTES_FRONT_STATIC_PATH} from "../routing/routing.types";
+import {ROUTES_FRONT_STATIC_PATH} from '../routing/routing.types';
 
 
 export const readonlyPermissionsSets: PERMISSIONS_POLICY_TYPE['readonlyPermissionsSets'] = {

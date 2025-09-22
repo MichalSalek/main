@@ -1,5 +1,5 @@
-import {useCallback, useState} from "react";
-import {logoutUser_IO} from "../../domain/user/userIO.possibilities.api";
+import {useCallback, useState} from 'react';
+import {logoutUser_IO} from '../../domain/user/userIO.possibilities.api';
 
 export const useLogoutUserHook = () => {
 

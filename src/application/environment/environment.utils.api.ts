@@ -1,4 +1,4 @@
-import {ENV_VARS} from "./environment.config";
+import {ENV_VARS} from './environment.config';
 
 export const IS_DEVELOPMENT_ENV = (): boolean => process.env.NODE_ENV === 'development'
 

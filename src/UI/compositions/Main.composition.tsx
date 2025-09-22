@@ -11,10 +11,10 @@ import {HeadMolecule} from '../building-blocks/Head.molecule'
 import {theme} from '../styles/theme'
 import {BrickWallAppLoaderComposition} from './loaders/BrickWallAppLoader.composition'
 import {UIComposition} from './UI.composition'
-import {useUserMetadataController} from "../../domain/user/useUserMetadata.controller";
-import {initRoutingInterceptor} from "../../domain/redirections-and-routing/routing.interceptor";
-import {AppSnackbarsController} from "../../application/app-snackbar/sonner-adapter/AppSnackbars.controller";
-import {useInitCurrentUserController} from "../../domain/user/user.controller";
+import {useUserMetadataController} from '../../domain/user/useUserMetadata.controller';
+import {initRoutingInterceptor} from '../../domain/redirections-and-routing/routing.interceptor';
+import {AppSnackbarsController} from '../../application/app-snackbar/sonner-adapter/AppSnackbars.controller';
+import {useInitCurrentUserController} from '../../domain/user/user.controller';
 
 
 type Props = {

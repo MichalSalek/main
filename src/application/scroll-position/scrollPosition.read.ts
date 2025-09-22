@@ -1,4 +1,4 @@
-import {ReduxState} from "../store/store";
+import {ReduxState} from '../store/store';
 
 export type ScrollPositionSlice = {
   position?: number

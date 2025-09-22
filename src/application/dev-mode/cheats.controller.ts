@@ -1,5 +1,5 @@
-import {CheatCode} from "./cheats.types";
-import {MAX_CODE_LENGTH} from "./cheats.config";
+import {CheatCode} from './cheats.types';
+import {MAX_CODE_LENGTH} from './cheats.config';
 
 
 type Config = Record<CheatCode, () => void>

@@ -5,8 +5,8 @@ import {reduxStore} from '../store/store'
 import {STORE_SET_appSnackbar_newSnackbar} from './appSnackbar.slice'
 import {SnackbarWrapper} from './appSnackbar.types'
 import {generateAppAlertWrapper} from './appSnackbar.utils.api'
-import {APP_SNACKBAR_STATE} from "./appSnackbar.state";
-import {SNACKBAR_DEBOUNCE_TIME} from "./appSnackbar.config";
+import {APP_SNACKBAR_STATE} from './appSnackbar.state';
+import {SNACKBAR_DEBOUNCE_TIME} from './appSnackbar.config';
 
 
 export const pushNewSnackbar = (input: string | EVENT_INFO_TYPE | undefined, color?: SnackbarWrapper['color']): void => {

@@ -6,14 +6,14 @@ import {
   turnOffViewLoader,
   turnOnAppBusyLoader,
   turnOnViewLoader
-} from "../../application/app-loaders/appLoaders.possibilities.api";
+} from '../../application/app-loaders/appLoaders.possibilities.api';
 import {
   addRecordToBackHistory,
   removeLastRecordFromBackHistory,
   resetGoBackHistory
-} from "../../application/go-back-UI-action/goBack.possibilities";
-import {permissionCheckOnRouteWithActionInterceptor} from "../permissions/permissionCheckOnRouteWithAction.interceptor";
-import {ROUTES_FRONT} from "../../READONLY-shared-kernel/domain/routing/routing.config";
+} from '../../application/go-back-UI-action/goBack.possibilities';
+import {permissionCheckOnRouteWithActionInterceptor} from '../permissions/permissionCheckOnRouteWithAction.interceptor';
+import {ROUTES_FRONT} from '../../READONLY-shared-kernel/domain/routing/routing.config';
 
 
 export const initRoutingInterceptor = () => {

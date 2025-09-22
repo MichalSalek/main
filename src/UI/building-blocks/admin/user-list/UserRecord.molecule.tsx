@@ -8,13 +8,13 @@ import {UserNoSensitiveWithRelationsExtended} from '../../../../READONLY-shared-
 import {PERMISSIONS_POLICY} from '../../../../READONLY-shared-kernel/policies/permissions.policy'
 import {ActionButtonsMolecule} from './ActionButtons.molecule'
 import {LineRecordAtom} from './LineRecord.atom'
-import {User} from "../../../../READONLY-shared-kernel/models/db_models";
+import {User} from '../../../../READONLY-shared-kernel/models/db_models';
 import {
   getAccountStatusUI,
   getPaymentStatusUI,
   getRoleUI
-} from "../../account-and-user-operations/userAndAccountUI.api";
-import {getPricingPlanUI} from "../../pricing-plan/pricingPlanUI.api";
+} from '../../account-and-user-operations/userAndAccountUI.api';
+import {getPricingPlanUI} from '../../pricing-plan/pricingPlanUI.api';
 
 
 const UserRecordMolecule = (

@@ -3,44 +3,44 @@ import {DefaultSize, ExtendedSettings, FixedCropper, FixedCropperRef, ImageRestr
 import 'react-advanced-cropper/dist/style.css'
 import scss from './cropper.module.scss'
 import {Button, Stack, Step, StepContent, StepLabel, Stepper, Typography} from '@mui/material';
-import {STYLES_POLICY} from "../../../../../READONLY-shared-kernel/policies/styles.policy";
-import {useSetActonButtonsHook} from "../../../../application-hooks/useSetActonButtons.hook";
+import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {useSetActonButtonsHook} from '../../../../application-hooks/useSetActonButtons.hook';
 // https://www.npmjs.com/package/react-advanced-cropper
 // https://advanced-cropper.github.io/react-advanced-cropper/docs/guides/recipes/
-import {reportIssue} from "../../../../../application/error-debugger/errorHandler.possibilities.api";
+import {reportIssue} from '../../../../../application/error-debugger/errorHandler.possibilities.api';
 import {
   IMAGE_ASPECT_RATIO,
   IMAGE_QUALITY,
   IMAGE_TYPE,
   MAX_UPLOAD_IMAGE_WIDTH_IN_PX
-} from "../../../../../domain/gallery/gallery-records.config";
-import {useLoadImageHook} from "./useLoadImage.hook";
-import {getAppIcon} from "../../../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {useSetLoadingIcon} from "../../../app-menu/dynamicMenu.possibilities.api";
-import {freezeThreadAndWait} from "@msalek/utils";
+} from '../../../../../domain/gallery/gallery-records.config';
+import {useLoadImageHook} from './useLoadImage.hook';
+import {getAppIcon} from '../../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {useSetLoadingIcon} from '../../../app-menu/dynamicMenu.possibilities.api';
+import {freezeThreadAndWait} from '@msalek/utils';
 import {
   turnOffAppBusyLoader,
   turnOnAppBusyLoader
-} from "../../../../../application/app-loaders/appLoaders.possibilities.api";
-import {SelectAnyTraitsInputMolecule} from "./SelectAnyTraitsInput.molecule";
-import {LinkAtom} from "../../../_wide-use-components/Link.atom";
+} from '../../../../../application/app-loaders/appLoaders.possibilities.api';
+import {SelectAnyTraitsInputMolecule} from './SelectAnyTraitsInput.molecule';
+import {LinkAtom} from '../../../_wide-use-components/Link.atom';
 import {
   createGalleryRecord_IO,
   deleteAssetFromVendor_IO,
   uploadPhotoAsset_IO
-} from "../../../../../domain/gallery/galleryIO.possibilities.api";
-import {useAppSelector} from "../../../../../application/store/store";
-import {STORE_SEL_user_currentUser} from "../../../../../domain/user/user.read";
-import {pushNewSnackbar} from "../../../../../application/app-snackbar/appSnackbar.possibilities.api";
-import {Trait} from "../../../../../READONLY-shared-kernel/domain/gallery/gallery.types";
-import {CloudinaryType} from "../../../../../domain/gallery/cloudinary-adapter/cloudinary.types";
+} from '../../../../../domain/gallery/galleryIO.possibilities.api';
+import {useAppSelector} from '../../../../../application/store/store';
+import {STORE_SEL_user_currentUser} from '../../../../../domain/user/user.read';
+import {pushNewSnackbar} from '../../../../../application/app-snackbar/appSnackbar.possibilities.api';
+import {Trait} from '../../../../../READONLY-shared-kernel/domain/gallery/gallery.types';
+import {CloudinaryType} from '../../../../../domain/gallery/cloudinary-adapter/cloudinary.types';
 import {getIDMark} from '../../../../../READONLY-shared-kernel/domain/gallery/gallery.utils';
-import {ROUTES_FRONT} from "../../../../../READONLY-shared-kernel/domain/routing/routing.config";
-import {useGetGalleryConfig} from "../../hooks/useGetGalleryConfig.hook";
+import {ROUTES_FRONT} from '../../../../../READONLY-shared-kernel/domain/routing/routing.config';
+import {useGetGalleryConfig} from '../../hooks/useGetGalleryConfig.hook';
 import {
   cloudinaryUploadPreset
-} from "../../../../../READONLY-shared-kernel/domain/adapters/cloudinary/cloudinary.config";
-import {CLOUDINARY_ASSET_FOLDER} from "../../../../../domain/gallery/cloudinary-adapter/cloudinary.config";
+} from '../../../../../READONLY-shared-kernel/domain/adapters/cloudinary/cloudinary.config';
+import {CLOUDINARY_ASSET_FOLDER} from '../../../../../domain/gallery/cloudinary-adapter/cloudinary.config';
 
 const steps = [
   {
@@ -59,7 +59,7 @@ const steps = [
   },
   {
     label: 'Zapis zdjęcia do galerii',
-    description: `Gotowe!`,
+    description: 'Gotowe!',
   }
 ]
 
@@ -164,10 +164,10 @@ export const AddNewPhotoOrganism = () => {
 
         setLoadingIcon()
         const uploadPhotoFormData = new FormData()
-        uploadPhotoFormData.append("file", croppedImage, getIDMark(currentUser.user_id))
-        uploadPhotoFormData.append("asset_folder", CLOUDINARY_ASSET_FOLDER(currentUser.user_id))
-        uploadPhotoFormData.append("upload_preset", cloudinaryUploadPreset)
-        uploadPhotoFormData.append("resource_type", 'image')
+        uploadPhotoFormData.append('file', croppedImage, getIDMark(currentUser.user_id))
+        uploadPhotoFormData.append('asset_folder', CLOUDINARY_ASSET_FOLDER(currentUser.user_id))
+        uploadPhotoFormData.append('upload_preset', cloudinaryUploadPreset)
+        uploadPhotoFormData.append('resource_type', 'image')
 
         // After error way, use memoized asset instead if uploading doubled one.
         if (memoizedResponseForErrorCase.current) {

@@ -1,5 +1,5 @@
 import {ReduxState} from '../store/store'
-import {ROUTES_FRONT_NAME} from "../../READONLY-shared-kernel/domain/routing/routing.types";
+import {ROUTES_FRONT_NAME} from '../../READONLY-shared-kernel/domain/routing/routing.types';
 
 
 export type GoBackSliceData = {

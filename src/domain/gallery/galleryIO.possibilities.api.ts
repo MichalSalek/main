@@ -1,11 +1,11 @@
 import {callHTTPEndpoint} from '../../application/http-layer/http.operations.api'
 import {ENDPOINTS} from '../../READONLY-shared-kernel/domain/http/http.endpoints'
-import {GALLERY_DTO_API_V1} from "../../READONLY-shared-kernel/models/gallery/gallery.dto";
-import {httpHandlerAction} from "../../application/http-layer/axios-adapter/axios.adapter";
-import {reportIssue} from "../../application/error-debugger/errorHandler.possibilities.api";
-import {CloudinaryType} from "./cloudinary-adapter/cloudinary.types";
-import {CLOUDINARY_UPLOAD_URL} from "../../READONLY-shared-kernel/domain/adapters/cloudinary/cloudinary.config";
-import {ENV_VARS} from "../../application/environment/environment.config";
+import {GALLERY_DTO_API_V1} from '../../READONLY-shared-kernel/models/gallery/gallery.dto';
+import {httpHandlerAction} from '../../application/http-layer/axios-adapter/axios.adapter';
+import {reportIssue} from '../../application/error-debugger/errorHandler.possibilities.api';
+import {CloudinaryType} from './cloudinary-adapter/cloudinary.types';
+import {CLOUDINARY_UPLOAD_URL} from '../../READONLY-shared-kernel/domain/adapters/cloudinary/cloudinary.config';
+import {ENV_VARS} from '../../application/environment/environment.config';
 
 
 export const getGalleryConfig_IO: GALLERY_DTO_API_V1['GET_GALLERY_CONFIG']['IO_CLIENT_FUNCTION'] = async (

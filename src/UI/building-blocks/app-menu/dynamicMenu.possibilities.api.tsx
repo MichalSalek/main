@@ -1,6 +1,6 @@
-import {useSetActonButtonsHook} from "../../application-hooks/useSetActonButtons.hook";
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {useCallback} from "react";
+import {useSetActonButtonsHook} from '../../application-hooks/useSetActonButtons.hook';
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {useCallback} from 'react';
 
 
 export const useSetLoadingIcon = () => {

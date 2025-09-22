@@ -1,13 +1,13 @@
-import {Box, Card, CardActions, CardContent, CardMedia, Fab, Stack, Typography, Zoom} from "@mui/material";
-import {FilterSelectedValuesAtom} from "../admin/user-list/user-list-filters/generics/FilterSelectedValues.atom";
-import {GalleryRecord} from "../../../READONLY-shared-kernel/models/db_models";
-import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
-import CircularProgress from "@mui/material/CircularProgress";
-import {useCallback, useContext, useEffect, useMemo, useState} from "react";
-import {GalleryDataContext} from "../../../domain/gallery/gallery-data/galleryData.context";
-import {useAppSelector} from "../../../application/store/store";
-import {STORE_SEL_scrollPosition_position} from "../../../application/scroll-position/scrollPosition.read";
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
+import {Box, Card, CardActions, CardContent, CardMedia, Fab, Stack, Typography, Zoom} from '@mui/material';
+import {FilterSelectedValuesAtom} from '../admin/user-list/user-list-filters/generics/FilterSelectedValues.atom';
+import {GalleryRecord} from '../../../READONLY-shared-kernel/models/db_models';
+import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import CircularProgress from '@mui/material/CircularProgress';
+import {useCallback, useContext, useEffect, useMemo, useState} from 'react';
+import {GalleryDataContext} from '../../../domain/gallery/gallery-data/galleryData.context';
+import {useAppSelector} from '../../../application/store/store';
+import {STORE_SEL_scrollPosition_position} from '../../../application/scroll-position/scrollPosition.read';
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
 
 
 const RECORDS_NUMBER_PER_PAGE = 4

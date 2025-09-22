@@ -1,6 +1,6 @@
-import {useEffect, useState} from "react";
-import {GalleryConfig} from "../../../../READONLY-shared-kernel/models/db_models";
-import {getGalleryConfig_IO} from "../../../../domain/gallery/galleryIO.possibilities.api";
+import {useEffect, useState} from 'react';
+import {GalleryConfig} from '../../../../READONLY-shared-kernel/models/db_models';
+import {getGalleryConfig_IO} from '../../../../domain/gallery/galleryIO.possibilities.api';
 
 export const useGetGalleryConfig = () => {
 

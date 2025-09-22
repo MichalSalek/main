@@ -1,4 +1,4 @@
-import {ReduxState} from "../../application/store/store";
+import {ReduxState} from '../../application/store/store';
 
 export type GallerySliceData = {
   filtersStrictSwitch: boolean

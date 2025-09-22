@@ -1,5 +1,5 @@
-import {EventLogType, EventLogTypeValue} from "../../models/db_models";
-import {EVENT_INFO_TYPE} from "../commands-and-queries/cqrs.types";
+import {EventLogType, EventLogTypeValue} from '../../models/db_models';
+import {EVENT_INFO_TYPE} from '../commands-and-queries/cqrs.types';
 
 
 export const allowedEventLogTypes: Readonly<Record<EventLogType, EVENT_INFO_TYPE[]>> = {

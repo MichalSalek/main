@@ -1,7 +1,7 @@
-import {EVENT_INFO_TYPE} from "../../READONLY-shared-kernel/domain/commands-and-queries/cqrs.types";
-import {resetUserSlice} from "../user/user.possibilities.api";
-import {resetGoBackHistory} from "../../application/go-back-UI-action/goBack.possibilities";
-import {__debuggerGate} from "../../application/error-debugger/debugger.utils.api";
+import {EVENT_INFO_TYPE} from '../../READONLY-shared-kernel/domain/commands-and-queries/cqrs.types';
+import {resetUserSlice} from '../user/user.possibilities.api';
+import {resetGoBackHistory} from '../../application/go-back-UI-action/goBack.possibilities';
+import {__debuggerGate} from '../../application/error-debugger/debugger.utils.api';
 
 export const criticalStateChangesDependingOnEventLogsStream = async (event: EVENT_INFO_TYPE | null | undefined) => {
 

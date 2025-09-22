@@ -6,13 +6,15 @@ export type AppLoadersSliceData = {
   isAppLoading: boolean
   isViewLoading: boolean
   isAppBusy: boolean
+  isSessionChecking: boolean
 }
 
 export const initialPppLoadersSliceData: AppLoadersSliceData = {
   isAppReady: false,
   isAppLoading: false,
   isViewLoading: false,
-  isAppBusy: false
+  isAppBusy: false,
+  isSessionChecking: true
 }
 
 export const STORE_SEL_appLoaders_isAppReady = ({appLoadersSlice}: ReduxState): AppLoadersSliceData['isAppReady'] => appLoadersSlice.isAppReady
@@ -22,6 +24,8 @@ export const STORE_SEL_appLoaders_isAppLoading = ({appLoadersSlice}: ReduxState)
 export const STORE_SEL_appLoaders_isViewLoading = ({appLoadersSlice}: ReduxState): AppLoadersSliceData['isViewLoading'] => appLoadersSlice.isViewLoading
 
 export const STORE_SEL_appLoaders_isAppBusy = ({appLoadersSlice}: ReduxState): AppLoadersSliceData['isAppBusy'] => appLoadersSlice.isAppBusy
+
+export const STORE_SEL_appLoaders_isSessionChecking = ({appLoadersSlice}: ReduxState): AppLoadersSliceData['isSessionChecking'] => appLoadersSlice.isSessionChecking
 
 
 // * EXAMPLE *

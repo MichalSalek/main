@@ -8,13 +8,13 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogActions from '@mui/material/DialogActions';
 import Button from '@mui/material/Button';
 import Autocomplete, {createFilterOptions} from '@mui/material/Autocomplete';
-import {FilterSelectedValuesAtom} from "../../../admin/user-list/user-list-filters/generics/FilterSelectedValues.atom";
-import {Checkbox, ListItem, Typography} from "@mui/material";
-import {Trait} from "../../../../../READONLY-shared-kernel/domain/gallery/gallery.types";
-import {createTrait_IO} from "../../../../../domain/gallery/galleryIO.possibilities.api";
-import {VALIDATION_POLICY} from "../../../../../READONLY-shared-kernel/policies/validation.policy";
-import {getAppIcon} from "../../../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {GalleryConfig} from "../../../../../READONLY-shared-kernel/models/db_models";
+import {FilterSelectedValuesAtom} from '../../../admin/user-list/user-list-filters/generics/FilterSelectedValues.atom';
+import {Checkbox, ListItem, Typography} from '@mui/material';
+import {Trait} from '../../../../../READONLY-shared-kernel/domain/gallery/gallery.types';
+import {createTrait_IO} from '../../../../../domain/gallery/galleryIO.possibilities.api';
+import {VALIDATION_POLICY} from '../../../../../READONLY-shared-kernel/policies/validation.policy';
+import {getAppIcon} from '../../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {GalleryConfig} from '../../../../../READONLY-shared-kernel/models/db_models';
 
 
 const icon = getAppIcon.CheckboxUnchecked({fontSize: 'large'})
@@ -120,20 +120,20 @@ export const SelectAnyTraitsInputMolecule = (
 
   const getInputLabel = useMemo(() => {
     if (traitsType === 'records_traits') {
-      return "Cechy stylizacji"
+      return 'Cechy stylizacji'
     }
     if (traitsType === 'records_color_traits') {
-      return "Kolorystyka"
+      return 'Kolorystyka'
     }
   }, [traitsType])
 
 
   const getTitle = useMemo(() => {
     if (traitsType === 'records_traits') {
-      return "Dodaj nową cechę"
+      return 'Dodaj nową cechę'
     }
     if (traitsType === 'records_color_traits') {
-      return "Dodaj nową kolorystykę"
+      return 'Dodaj nową kolorystykę'
     }
   }, [traitsType])
 

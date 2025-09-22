@@ -1,10 +1,10 @@
 import {TextField} from '@mui/material'
 import {ChangeEvent, ReactElement, useCallback, useState} from 'react'
-import {User} from "../../../../../READONLY-shared-kernel/models/db_models";
-import {STYLES_POLICY} from "../../../../../READONLY-shared-kernel/policies/styles.policy";
-import {useFilterGenericHook} from "./generics/useFilterGeneric.hook";
-import {FilterWrapperComposition} from "./generics/FilterWrapper.composition";
-import {FiltersCallbackProps} from "./Filters.container";
+import {User} from '../../../../../READONLY-shared-kernel/models/db_models';
+import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {useFilterGenericHook} from './generics/useFilterGeneric.hook';
+import {FilterWrapperComposition} from './generics/FilterWrapper.composition';
+import {FiltersCallbackProps} from './Filters.container';
 
 
 export const FilterEmailMolecule = ({callback}: FiltersCallbackProps): ReactElement => {

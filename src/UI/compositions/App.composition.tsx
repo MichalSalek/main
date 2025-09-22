@@ -1,12 +1,12 @@
 import {ReactElement} from 'react'
 import {Container, Stack} from '@mui/material';
-import {BusyAppLoaderComposition} from "./loaders/BusyAppLoader.composition";
-import {ViewLoaderComposition} from "./loaders/ViewLoader.composition";
-import {AppDynamicMenuContext} from "../../application/app-dynamic-menu/appDynamicMenu.context";
-import {useAppDynamicMenuContext} from "../../application/app-dynamic-menu/useAppDynamicMenuContext.hook";
-import {AppMenuMolecule} from "../building-blocks/app-menu/AppMenu.molecule";
-import {STYLES_POLICY} from "../../READONLY-shared-kernel/policies/styles.policy";
-import {GoBackAtom} from "../building-blocks/_wide-use-components/GoBack.atom";
+import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
+import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
+import {AppDynamicMenuContext} from '../../application/app-dynamic-menu/appDynamicMenu.context';
+import {useAppDynamicMenuContext} from '../../application/app-dynamic-menu/useAppDynamicMenuContext.hook';
+import {AppMenuMolecule} from '../building-blocks/app-menu/AppMenu.molecule';
+import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
+import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
 
 
 type Props = {

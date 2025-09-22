@@ -1,17 +1,17 @@
-import {Button, Dialog, IconButton, Stack, Switch, Toolbar, Typography} from "@mui/material";
-import {SelectAnyTraitsInputMolecule} from "../gallery-records/add-new/SelectAnyTraitsInput.molecule";
-import {useGetGalleryConfig} from "../hooks/useGetGalleryConfig.hook";
-import {ChangeEvent, useCallback, useContext, useEffect, useRef, useState} from "react";
-import {Trait} from "../../../../READONLY-shared-kernel/domain/gallery/gallery.types";
-import {useAppDispatch, useAppSelector} from "../../../../application/store/store";
-import {STORE_SEL_gallery_filtersStrictSwitch} from "../../../../domain/gallery/gallery.read";
-import {STORE_SET_gallery_filtersStrictSwitch} from "../../../../domain/gallery/gallery.slice";
-import {getGalleryRecords_IO} from "../../../../domain/gallery/galleryIO.possibilities.api";
-import {freezeThreadAndWait, useFireOnMountHook} from "@msalek/utils";
-import {GalleryRecord} from "../../../../READONLY-shared-kernel/models/db_models";
-import {getAppIcon} from "../../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {useSetActonButtonsHook} from "../../../application-hooks/useSetActonButtons.hook";
-import {GalleryDataContext} from "../../../../domain/gallery/gallery-data/galleryData.context";
+import {Button, Dialog, IconButton, Stack, Switch, Toolbar, Typography} from '@mui/material';
+import {SelectAnyTraitsInputMolecule} from '../gallery-records/add-new/SelectAnyTraitsInput.molecule';
+import {useGetGalleryConfig} from '../hooks/useGetGalleryConfig.hook';
+import {ChangeEvent, useCallback, useContext, useEffect, useRef, useState} from 'react';
+import {Trait} from '../../../../READONLY-shared-kernel/domain/gallery/gallery.types';
+import {useAppDispatch, useAppSelector} from '../../../../application/store/store';
+import {STORE_SEL_gallery_filtersStrictSwitch} from '../../../../domain/gallery/gallery.read';
+import {STORE_SET_gallery_filtersStrictSwitch} from '../../../../domain/gallery/gallery.slice';
+import {getGalleryRecords_IO} from '../../../../domain/gallery/galleryIO.possibilities.api';
+import {freezeThreadAndWait, useFireOnMountHook} from '@msalek/utils';
+import {GalleryRecord} from '../../../../READONLY-shared-kernel/models/db_models';
+import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {useSetActonButtonsHook} from '../../../application-hooks/useSetActonButtons.hook';
+import {GalleryDataContext} from '../../../../domain/gallery/gallery-data/galleryData.context';
 
 export const GalleryFiltersMolecule = () => {
 

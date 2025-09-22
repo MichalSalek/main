@@ -1,6 +1,6 @@
 import {Box, Stack} from '@mui/material'
 import {theme} from '../../styles/theme'
-import {CopyrightAtom} from "../_wide-use-components/Copyright.atom";
+import {CopyrightAtom} from '../_wide-use-components/Copyright.atom';
 
 
 export const StaticPagesFooterMolecule = () => {

@@ -17,6 +17,9 @@ export const appLoadersSlice = createSlice({
     },
     STORE_SET_appLoaders_isAppBusy: (state, action: PayloadAction<AppLoadersSliceData['isAppBusy']>) => {
       state.isAppBusy = action.payload
+    },
+    STORE_SET_appLoaders_isSessionChecking: (state, action: PayloadAction<AppLoadersSliceData['isSessionChecking']>) => {
+      state.isSessionChecking = action.payload
     }
   }
 })
@@ -24,5 +27,6 @@ export const {
   STORE_SET_appLoaders_isAppReady,
   STORE_SET_appLoaders_isAppLoading,
   STORE_SET_appLoaders_isViewLoading,
-  STORE_SET_appLoaders_isAppBusy
+  STORE_SET_appLoaders_isAppBusy,
+  STORE_SET_appLoaders_isSessionChecking
 } = appLoadersSlice.actions

@@ -1,4 +1,4 @@
-import {SvgIconOwnProps} from "@mui/material";
+import {SvgIconOwnProps} from '@mui/material';
 import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
 import CropRoundedIcon from '@mui/icons-material/CropRounded';
 import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';

@@ -1,5 +1,5 @@
 import {useCallback, useContext, useState} from 'react'
-import {AdminContext} from "../../../../../../domain/admin/admin.context";
+import {AdminContext} from '../../../../../../domain/admin/admin.context';
 
 
 export const useFilterGenericHook = () => {

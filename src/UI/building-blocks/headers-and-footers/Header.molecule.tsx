@@ -1,6 +1,6 @@
 import {Container} from '@mui/material'
-import {LogoAtom} from "../_wide-use-components/logo/Logo.atom";
-import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
+import {LogoAtom} from '../_wide-use-components/logo/Logo.atom';
+import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
 
 
 export const HeaderMolecule = () => {

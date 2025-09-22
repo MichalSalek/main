@@ -1,8 +1,8 @@
 import * as React from 'react'
 import {ReactElement, useContext} from 'react'
-import {BottomNavigation, Stack} from "@mui/material";
-import {AppDynamicMenuContext} from "../../../application/app-dynamic-menu/appDynamicMenu.context";
-import {ActionButtonAtom} from "../_wide-use-components/ActionButton.atom";
+import {BottomNavigation, Stack} from '@mui/material';
+import {AppDynamicMenuContext} from '../../../application/app-dynamic-menu/appDynamicMenu.context';
+import {ActionButtonAtom} from '../_wide-use-components/ActionButton.atom';
 
 
 export const DynamicMenuActionButtonsMolecule = (): ReactElement => {

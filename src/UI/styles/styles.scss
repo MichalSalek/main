@@ -19,11 +19,11 @@
 }
 
 .fadein-animation {
-  animation-duration: 300ms;
+  animation-duration: 200ms;
   animation-name: fadein;
   animation-iteration-count: 1;
   animation-direction: normal;
-  animation-timing-function: ease-out;
+  animation-timing-function: ease-in;
 }
 
 html, body, #__next {

@@ -3,7 +3,7 @@ import {
   deleteSessionStorage,
   getSessionStorage,
   setSessionStorage
-} from "./session-storage-adapter/sessionStorage.adapter";
+} from './session-storage-adapter/sessionStorage.adapter';
 
 
 export const getFromClientStorage = ({key}: { key: string }): string | null => {

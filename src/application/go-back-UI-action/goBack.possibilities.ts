@@ -1,11 +1,11 @@
-import {reduxStore} from "../store/store";
-import {ROUTING_POLICY} from "../../READONLY-shared-kernel/policies/routing.policy";
+import {reduxStore} from '../store/store';
+import {ROUTING_POLICY} from '../../READONLY-shared-kernel/policies/routing.policy';
 import {
   STORE_REMOVE_goBack_firstNewestRoute,
   STORE_RESET_goBack_previousRoutes,
   STORE_SET_goBack_previousRouteForUI
-} from "./goBack.slice";
-import {PERMISSIONS_POLICY} from "../../READONLY-shared-kernel/policies/permissions.policy";
+} from './goBack.slice';
+import {PERMISSIONS_POLICY} from '../../READONLY-shared-kernel/policies/permissions.policy';
 
 export const addRecordToBackHistory = (routePathAfterRedirection: string): void => {
 

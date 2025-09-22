@@ -6,7 +6,7 @@ import {
   disableUserAny_IO,
   enableUserAny_IO
 } from '../../../../domain/admin/adminActionsIO.possibilities.api'
-import {deleteSessionAll_IO} from '../../../../domain/session-actions/sessionIO.possibilities.api'
+import {deleteSessionAll_IO} from '../../../../domain/session/sessionIO.possibilities.api'
 import {getAndUpdateAppUsersList_IO} from '../../../../domain/user/userIO.operations.api'
 import {UserNoSensitiveWithRelationsExtended} from '../../../../READONLY-shared-kernel/models/user/user.types'
 import {PERMISSIONS_POLICY} from '../../../../READONLY-shared-kernel/policies/permissions.policy'

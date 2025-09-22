@@ -1,10 +1,10 @@
-import {ChangeEvent, useCallback, useEffect, useRef, useState} from "react";
-import {useSetLoadingIcon} from "../../../app-menu/dynamicMenu.possibilities.api";
-import {pushNewSnackbar} from "../../../../../application/app-snackbar/appSnackbar.possibilities.api";
+import {ChangeEvent, useCallback, useEffect, useRef, useState} from 'react';
+import {useSetLoadingIcon} from '../../../app-menu/dynamicMenu.possibilities.api';
+import {pushNewSnackbar} from '../../../../../application/app-snackbar/appSnackbar.possibilities.api';
 import {
   turnOffAppBusyLoader,
   turnOnAppBusyLoader
-} from "../../../../../application/app-loaders/appLoaders.possibilities.api";
+} from '../../../../../application/app-loaders/appLoaders.possibilities.api';
 
 
 type Props = {

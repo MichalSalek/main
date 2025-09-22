@@ -4,8 +4,8 @@ import {appSnackbarSlice} from '../app-snackbar/appSnackbar.slice'
 import {devModeSlice} from '../dev-mode/dev-mode.slice'
 import {scrollPositionSlice} from '../scroll-position/scrollPosition.slice'
 import {ReducerNames} from './store'
-import {goBackSlice} from "../go-back-UI-action/goBack.slice";
-import {gallerySlice} from "../../domain/gallery/gallery.slice";
+import {goBackSlice} from '../go-back-UI-action/goBack.slice';
+import {gallerySlice} from '../../domain/gallery/gallery.slice';
 
 
 export const reducers = {

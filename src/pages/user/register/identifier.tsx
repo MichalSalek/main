@@ -7,9 +7,9 @@ import {redirectToAction} from '../../../domain/redirections-and-routing/redirec
 import {checkIfNotEmailExists_IO} from '../../../domain/user/userIO.possibilities.api'
 import {ROUTES_FRONT} from '../../../READONLY-shared-kernel/domain/routing/routing.config'
 import {EmailInputAtom} from '../../../UI/building-blocks/_wide-use-components/EmailInput.atom'
-import {ConditionalButtonAtom} from "../../../UI/building-blocks/_wide-use-components/ConditionalButton.atom";
-import {VALIDATION_POLICY} from "../../../READONLY-shared-kernel/policies/validation.policy";
-import {setToClientStorage} from "../../../application/client-device-storage/clientStorage.possibilities.api";
+import {ConditionalButtonAtom} from '../../../UI/building-blocks/_wide-use-components/ConditionalButton.atom';
+import {VALIDATION_POLICY} from '../../../READONLY-shared-kernel/policies/validation.policy';
+import {setToClientStorage} from '../../../application/client-device-storage/clientStorage.possibilities.api';
 
 
 export default function Register() {

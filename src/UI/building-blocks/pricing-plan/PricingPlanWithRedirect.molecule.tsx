@@ -7,9 +7,9 @@ import {ROUTES_FRONT_APP, ROUTES_FRONT_STATIC} from '../../../READONLY-shared-ke
 import {PRICING_POLICY} from '../../../READONLY-shared-kernel/policies/pricing.policy'
 import {getPricingPlanUI} from './pricingPlanUI.api'
 import {usePricingPlanData} from './usePricingPlanData.hook'
-import {redirectToAction} from "../../../domain/redirections-and-routing/redirections.operations.api";
-import {DataPassedBetweenViewsConfig} from "../../../application/data-between-views/dataBetweenViews.config";
-import {setToClientStorage} from "../../../application/client-device-storage/clientStorage.possibilities.api";
+import {redirectToAction} from '../../../domain/redirections-and-routing/redirections.operations.api';
+import {DataPassedBetweenViewsConfig} from '../../../application/data-between-views/dataBetweenViews.config';
+import {setToClientStorage} from '../../../application/client-device-storage/clientStorage.possibilities.api';
 
 
 export const PricingPlanWithRedirectMolecule = (): ReactElement => {

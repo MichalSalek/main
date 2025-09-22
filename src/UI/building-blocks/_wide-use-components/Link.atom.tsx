@@ -2,11 +2,11 @@ import Link from 'next/link'
 import {HTMLAttributes, ReactNode, SyntheticEvent, useCallback, useEffect, useRef} from 'react'
 import {ROUTES_FRONT_PATH} from '../../../READONLY-shared-kernel/domain/routing/routing.types'
 import {Button, ButtonProps} from '@mui/material'
-import {STORE_SEL_appLoaders_isViewLoading} from "../../../application/app-loaders/appLoaders.read";
-import {useAppSelector} from "../../../application/store/store";
+import {STORE_SEL_appLoaders_isViewLoading} from '../../../application/app-loaders/appLoaders.read';
+import {useAppSelector} from '../../../application/store/store';
 import scss from './atoms.module.scss'
-import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
+import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
 
 
 type Props = {

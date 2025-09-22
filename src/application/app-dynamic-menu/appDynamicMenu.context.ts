@@ -1,5 +1,5 @@
 import {createContext} from 'react'
-import {AppDynamicMenuButton} from "./appDynamicMenu.types";
+import {AppDynamicMenuButton} from './appDynamicMenu.types';
 
 
 export type AppDynamicMenuContextType = {

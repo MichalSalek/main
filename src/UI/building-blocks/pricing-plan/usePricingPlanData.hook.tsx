@@ -1,9 +1,9 @@
 import {ChangeEvent, useCallback, useMemo, useState} from 'react'
 import {DataPassedBetweenViewsConfig} from '../../../application/data-between-views/dataBetweenViews.config'
 import {PRICING_POLICY, PricingPlanTypes} from '../../../READONLY-shared-kernel/policies/pricing.policy'
-import {getFromClientStorage} from "../../../application/client-device-storage/clientStorage.possibilities.api";
-import {defaultPricingPlanPeriod, PricingPlan} from "../../../READONLY-shared-kernel/domain/pricing/pricing.config";
-import {useFireOnMountHook} from "@msalek/utils";
+import {getFromClientStorage} from '../../../application/client-device-storage/clientStorage.possibilities.api';
+import {defaultPricingPlanPeriod, PricingPlan} from '../../../READONLY-shared-kernel/domain/pricing/pricing.config';
+import {useFireOnMountHook} from '@msalek/utils';
 
 
 type Returns = {

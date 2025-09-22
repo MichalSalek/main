@@ -7,7 +7,7 @@ import {
   EVENTS_ALL_TYPE,
   GROUP_KEY
 } from '../domain/commands-and-queries/cqrs.types'
-import {eventsDisallowedForUI} from "../domain/UI-events/UIEvents.config";
+import {eventsDisallowedForUI} from '../domain/UI-events/UIEvents.config';
 
 
 export type EVENTS_POLICY_TYPE = {

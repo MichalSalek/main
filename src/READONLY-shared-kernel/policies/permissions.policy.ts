@@ -20,7 +20,6 @@ export type PERMISSIONS_POLICY_TYPE = {
   permissionsForRoutes: Readonly<Record<ROUTES_FRONT_PATH, Role[]>>
 
   utils: {
-    NORMALIZE_PATH: (path?: string | undefined) => string
     GET_PERMISSION_APPROVAL_FOR_ROUTE: (role: Role | undefined, requestedRoutePath: ROUTES_FRONT_PATH | string) => boolean
     GET_PERMISSION_APPROVAL_FOR_EVENT: (
       user?: UserNoSensitive | UserNoSensitiveWithRelations | CurrentUser | undefined,
@@ -40,21 +39,13 @@ export const PERMISSIONS_POLICY: PERMISSIONS_POLICY_TYPE = {
   permissionsForRoutes: Object.freeze(permissionsForRoutes),
 
   utils: {
-    NORMALIZE_PATH: (path) => {
-      if (!path) {
-        return ''
-      }
-      return path.endsWith('/') && path !== '/'
-        ? path.slice(0, -1)
-        : path
-    },
 
     GET_PERMISSION_APPROVAL_FOR_ROUTE: (role = RoleValue.NOT_LOGGED_IN, requestedRoutePath) => {
       // Role array of requested event is empty
       // OR
       // Role is included in requested event permission array.
       const typedRoutePath = requestedRoutePath as ROUTES_FRONT_PATH
-      const normalizedPath = PERMISSIONS_POLICY.utils.NORMALIZE_PATH(typedRoutePath) as ROUTES_FRONT_PATH
+      const normalizedPath = ROUTING_POLICY.utils.NORMALIZE_PATH(typedRoutePath) as ROUTES_FRONT_PATH
       return PERMISSIONS_POLICY.permissionsForRoutes[normalizedPath]?.includes(role as Role) ?? false
     },
 
@@ -98,7 +89,7 @@ export const PERMISSIONS_POLICY: PERMISSIONS_POLICY_TYPE = {
         userNotExistsCallback
       }) => {
 
-      const normalizedPath = PERMISSIONS_POLICY.utils.NORMALIZE_PATH(currentPathname)
+      const normalizedPath = ROUTING_POLICY.utils.NORMALIZE_PATH(currentPathname)
 
       if (!PERMISSIONS_POLICY.utils.GET_PERMISSION_APPROVAL_FOR_ROUTE(
         currentUser?.role,

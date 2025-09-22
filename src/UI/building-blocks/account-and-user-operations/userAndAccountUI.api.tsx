@@ -5,7 +5,7 @@ import {
   PaymentStatusValueFlipped,
   Role,
   RoleValueFlipped
-} from "../../../READONLY-shared-kernel/models/db_models";
+} from '../../../READONLY-shared-kernel/models/db_models';
 
 
 export const getRoleUI = (roleValue: Role | null | undefined): string => {

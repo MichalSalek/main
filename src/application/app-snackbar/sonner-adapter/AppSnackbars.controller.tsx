@@ -3,9 +3,9 @@ import {useAppSelector} from '../../store/store'
 import {SNACKBAR_MAX_SNACKS, SNACKBAR_TIMEOUT} from '../appSnackbar.config'
 import {STORE_SEL_snackbar_snackbars} from '../appSnackbar.read'
 import {SnackbarWrapper} from '../appSnackbar.types'
-import {toast, Toaster} from "sonner";
+import {toast, Toaster} from 'sonner';
 import scss from '../appSnackbar.module.scss'
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
 
 // https://sonner.emilkowal.ski/
 

@@ -5,7 +5,7 @@ import {EVENT_LOG_DTO_API_V1} from '../models/event-log/event_log.dto'
 import {SESSION_DTO_API_V1} from '../models/session/session.dto'
 import {USER_DTO_API_V1} from '../models/user/user.dto'
 import {PRICING_POLICY} from './pricing.policy'
-import {GALLERY_DTO_API_V1} from "../models/gallery/gallery.dto";
+import {GALLERY_DTO_API_V1} from '../models/gallery/gallery.dto';
 
 
 export type ValidationFlag = {

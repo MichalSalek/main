@@ -1,12 +1,12 @@
-import {EVENT_INFO_TYPE} from "../../READONLY-shared-kernel/domain/commands-and-queries/cqrs.types";
-import {pushNewSnackbar} from "../app-snackbar/appSnackbar.possibilities.api";
+import {EVENT_INFO_TYPE} from '../../READONLY-shared-kernel/domain/commands-and-queries/cqrs.types';
+import {pushNewSnackbar} from '../app-snackbar/appSnackbar.possibilities.api';
 import {
   criticalRedirectionsDependingOnEventLogsStreamInterceptor
-} from "../../domain/redirections-and-routing/criticalRedirectionsDependingOnEventLogsStream.interceptor";
-import {SnackbarWrapper} from "../app-snackbar/appSnackbar.types";
+} from '../../domain/redirections-and-routing/criticalRedirectionsDependingOnEventLogsStream.interceptor';
+import {SnackbarWrapper} from '../app-snackbar/appSnackbar.types';
 import {
   criticalStateChangesDependingOnEventLogsStream
-} from "../../domain/app-state-of-store/criticalStateChangesDependingOnEventLogsStream.interceptor";
+} from '../../domain/app-state-of-store/criticalStateChangesDependingOnEventLogsStream.interceptor';
 
 
 export type EventBusSideEffectInterceptor = {

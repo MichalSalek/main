@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import {AppDynamicMenuContextType} from "./appDynamicMenu.context";
+import {AppDynamicMenuContextType} from './appDynamicMenu.context';
 
 
 export const useAppDynamicMenuContext = (): AppDynamicMenuContextType => {

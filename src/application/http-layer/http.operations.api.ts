@@ -10,14 +10,15 @@ import {HTTPMethod} from '../../READONLY-shared-kernel/domain/http/http.config'
 import {EndpointURLFunction} from '../../READONLY-shared-kernel/domain/http/http.endpoints'
 import {__debuggerGate} from '../error-debugger/debugger.utils.api'
 import {httpHandlerAction} from './axios-adapter/axios.adapter'
-import {turnOffAppBusyLoader, turnOnAppBusyLoader} from "../app-loaders/appLoaders.possibilities.api";
-import {ENV_VARS} from "../environment/environment.config";
+import {turnOffAppBusyLoader, turnOnAppBusyLoader} from '../app-loaders/appLoaders.possibilities.api';
+import {ENV_VARS} from '../environment/environment.config';
 
 
 export type CallHTTPEndpointConfig = {
   url: EndpointURLFunction,
   mode: HTTPMethod
   payload?: unknown
+  disableLoaderForThisCall?: boolean
 }
 
 type CallHTTPEndpoint<ResPayload, ErrorPayload> = {
@@ -37,7 +38,8 @@ export const callHTTPEndpoint = async <ResPayload = unknown, ErrorPayload = unkn
   const {
     url,
     mode,
-    payload = undefined
+    payload = undefined,
+    disableLoaderForThisCall
   } = config
   try {
 
@@ -50,11 +52,11 @@ export const callHTTPEndpoint = async <ResPayload = unknown, ErrorPayload = unkn
       payload,
 
       fireOnFetchInit: async () => {
-        turnOnAppBusyLoader()
+        !disableLoaderForThisCall && turnOnAppBusyLoader()
       },
 
       fireOnFetchEnd: async () => {
-        turnOffAppBusyLoader()
+        !disableLoaderForThisCall && turnOffAppBusyLoader()
       },
 
       fireOnSuccess: async (response_from_adapter) => {

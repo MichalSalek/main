@@ -1,6 +1,6 @@
 import {PricingPlanTypes} from '../../policies/pricing.policy'
-import {Account} from "../../models/db_models";
-import {objectFlip, ValueOf} from "../../application/application.utils";
+import {Account} from '../../models/db_models';
+import {objectFlip, ValueOf} from '../../application/application.utils';
 
 
 export const PricingPlanValue = Object.freeze({

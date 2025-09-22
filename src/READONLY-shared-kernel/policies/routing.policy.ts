@@ -9,25 +9,15 @@ import {
   ROUTES_FRONT_APP,
   ROUTES_FRONT_KEYS,
   ROUTES_FRONT_STATIC,
-  ROUTES_FRONT_VALUES
+  ROUTES_FRONT_VALUES,
 } from '../domain/routing/routing.config'
-import {
-  ROUTES_API_NAME,
-  ROUTES_API_PATH,
-  ROUTES_API_TYPE,
-  ROUTES_FRONT_NAME,
-  ROUTES_FRONT_PATH,
-  ROUTES_FRONT_TYPE
-} from '../domain/routing/routing.types'
+import {ROUTES_API_NAME, ROUTES_API_PATH, ROUTES_FRONT_NAME, ROUTES_FRONT_PATH} from '../domain/routing/routing.types'
 
 
 export type ROUTING_POLICY_TYPE = {
 
-  routesFront: ROUTES_FRONT_TYPE
-  routesApi: ROUTES_API_TYPE
-
-
   utils: {
+    NORMALIZE_PATH: (path?: string | undefined) => string
     IS_EXISTS_REDIRECTION_FOR_PASSED_EVENT: (event: EVENT_INFO_TYPE | undefined | null) => boolean
     GET_ROUTE_FRONT_PATH: (routeName: ROUTES_FRONT_NAME | string | null) => ROUTES_FRONT_PATH | null
     GET_ROUTE_FRONT_NAME: (routePath: ROUTES_FRONT_PATH | string | null) => ROUTES_FRONT_NAME | null
@@ -37,18 +27,23 @@ export type ROUTING_POLICY_TYPE = {
       willBeRedirect: boolean,
       redirectAction: () => Promise<boolean>
     }
-    IS_APP_PATH: (requestedRoutePath: ROUTES_FRONT_PATH | string) => boolean
-    IS_STATIC_PAGE: (requestedRoutePath: ROUTES_FRONT_PATH | string) => boolean
+    IS_APP_PATH: (requestedRoutePath?: ROUTES_FRONT_PATH | string | undefined) => boolean
+    IS_STATIC_PAGE: (requestedRoutePath?: ROUTES_FRONT_PATH | string | undefined) => boolean
   }
 }
 
 export const ROUTING_POLICY: ROUTING_POLICY_TYPE = {
 
-  routesFront: ROUTES_FRONT,
-  routesApi: ROUTES_API,
-
 
   utils: {
+    NORMALIZE_PATH: (path) => {
+      if (!path) {
+        return ''
+      }
+      return path.endsWith('/') && path !== '/'
+        ? path.slice(0, -1)
+        : path
+    },
 
     GET_ROUTE_FRONT_PATH: (routeName) => {
       return typeof routeName === 'string' ? ROUTES_FRONT[routeName as ROUTES_FRONT_NAME] : null
@@ -87,20 +82,22 @@ export const ROUTING_POLICY: ROUTING_POLICY_TYPE = {
       }
       return {
         willBeRedirect,
-        redirectAction
+        redirectAction,
       }
     },
 
     IS_APP_PATH: (requestedRoutePath) => {
+      const pathToCheck = ROUTING_POLICY.utils.NORMALIZE_PATH(requestedRoutePath ? requestedRoutePath : location.pathname)
       return Boolean(Object.values(ROUTES_FRONT_APP)
-        .find((path) => path === requestedRoutePath))
+        .find((path) => path === pathToCheck))
     },
 
     IS_STATIC_PAGE: (requestedRoutePath) => {
+      const pathToCheck = ROUTING_POLICY.utils.NORMALIZE_PATH(requestedRoutePath ? requestedRoutePath : location.pathname)
       return Boolean(Object.values(ROUTES_FRONT_STATIC)
-        .find((path) => path === requestedRoutePath))
-    }
+        .find((path) => path === pathToCheck))
+    },
 
-  }
+  },
 
 } as const

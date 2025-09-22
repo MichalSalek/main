@@ -2,13 +2,13 @@ import {Box, Button, Container} from '@mui/material'
 import * as React from 'react'
 import {ReactElement, useCallback} from 'react'
 
-import {theme} from "../../styles/theme";
-import {DrawerOrganism} from "./drawer/Drawer.organism";
-import {DynamicMenuActionButtonsMolecule} from "./DynamicMenuActionButtons.molecule";
-import {STYLES_POLICY} from "../../../READONLY-shared-kernel/policies/styles.policy";
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {redirectToAction} from "../../../domain/redirections-and-routing/redirections.operations.api";
-import {ROUTES_FRONT} from "../../../READONLY-shared-kernel/domain/routing/routing.config";
+import {theme} from '../../styles/theme';
+import {DrawerOrganism} from './drawer/Drawer.organism';
+import {DynamicMenuActionButtonsMolecule} from './DynamicMenuActionButtons.molecule';
+import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {redirectToAction} from '../../../domain/redirections-and-routing/redirections.operations.api';
+import {ROUTES_FRONT} from '../../../READONLY-shared-kernel/domain/routing/routing.config';
 
 
 export const AppMenuMolecule = (): ReactElement => {

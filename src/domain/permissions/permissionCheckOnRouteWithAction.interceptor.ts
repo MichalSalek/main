@@ -1,11 +1,11 @@
-import {ROUTES_FRONT_PATH} from "../../READONLY-shared-kernel/domain/routing/routing.types";
-import {reduxStore} from "../../application/store/store";
-import {__debuggerGate} from "../../application/error-debugger/debugger.utils.api";
-import {PERMISSIONS_POLICY} from "../../READONLY-shared-kernel/policies/permissions.policy";
-import {pushEventToBus} from "../../application/event-bus/eventBus.possibilities.api";
-import {SnackbarWrapper} from "../../application/app-snackbar/appSnackbar.types";
-import {resetGoBackHistory} from "../../application/go-back-UI-action/goBack.possibilities";
-import {sessionGetCurrent_IO} from "../session-actions/sessionIO.operations.api";
+import {ROUTES_FRONT_PATH} from '../../READONLY-shared-kernel/domain/routing/routing.types';
+import {reduxStore} from '../../application/store/store';
+import {__debuggerGate} from '../../application/error-debugger/debugger.utils.api';
+import {PERMISSIONS_POLICY} from '../../READONLY-shared-kernel/policies/permissions.policy';
+import {pushEventToBus} from '../../application/event-bus/eventBus.possibilities.api';
+import {SnackbarWrapper} from '../../application/app-snackbar/appSnackbar.types';
+import {resetGoBackHistory} from '../../application/go-back-UI-action/goBack.possibilities';
+import {sessionGetCurrent_IO} from '../session/sessionIO.operations.api';
 
 export const permissionCheckOnRouteWithActionInterceptor = async (currentPathname: ROUTES_FRONT_PATH | string) => {
 
@@ -39,7 +39,7 @@ export const permissionCheckOnRouteWithActionInterceptor = async (currentPathnam
     currentUser,
     userExistsIsStaticPageCallback: (currentUser) => {
 
-      __debuggerGate(() => console.log(`Begin: userExistsIsStaticPageCallback. ALREADY_LOGGED`))
+      __debuggerGate(() => console.log('Begin: userExistsIsStaticPageCallback. ALREADY_LOGGED'))
 
 
       // Not permitted route (for logged user):
@@ -52,7 +52,7 @@ export const permissionCheckOnRouteWithActionInterceptor = async (currentPathnam
     },
     userExistsIsNotStaticPageCallback: (currentUser) => {
 
-      __debuggerGate(() => console.log(`Begin: userExistsIsNotStaticPageCallback. UNAUTHORIZED`))
+      __debuggerGate(() => console.log('Begin: userExistsIsNotStaticPageCallback. UNAUTHORIZED'))
 
 
       // Not permitted route, but another than static page - general auth error:
@@ -69,7 +69,7 @@ export const permissionCheckOnRouteWithActionInterceptor = async (currentPathnam
     },
     userNotExistsCallback: () => {
 
-      __debuggerGate(() => console.log(`Begin: userNotExistsCallback. LOGIN_FIRST`))
+      __debuggerGate(() => console.log('Begin: userNotExistsCallback. LOGIN_FIRST'))
 
 
       // Not logged and cannot be there:

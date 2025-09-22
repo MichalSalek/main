@@ -1,11 +1,11 @@
 import {Stack, Typography} from '@mui/material'
-import {ROUTES_FRONT} from "../../../READONLY-shared-kernel/domain/routing/routing.config";
-import {LinkAtom} from "../../../UI/building-blocks/_wide-use-components/Link.atom";
-import {AdminSimpleBox} from "../../../UI/building-blocks/admin/AdminSimpleBox.atom";
-import {DebugModeFrontendSwitch} from "../../../UI/building-blocks/admin/DebugModeFrontendSwitch.atom";
-import {DebugModeBackendSwitch} from "../../../UI/building-blocks/admin/DebugModeBackendSwitch.atom";
-import {DebugDBModeBackendSwitch} from "../../../UI/building-blocks/admin/DebugDBModeBackendSwitch.atom";
-import {AppConnectionChecker} from "../../../UI/building-blocks/admin/AppConnectionChecker.molecule";
+import {ROUTES_FRONT} from '../../../READONLY-shared-kernel/domain/routing/routing.config';
+import {LinkAtom} from '../../../UI/building-blocks/_wide-use-components/Link.atom';
+import {AdminSimpleBox} from '../../../UI/building-blocks/admin/AdminSimpleBox.atom';
+import {DebugModeFrontendSwitch} from '../../../UI/building-blocks/admin/DebugModeFrontendSwitch.atom';
+import {DebugModeBackendSwitch} from '../../../UI/building-blocks/admin/DebugModeBackendSwitch.atom';
+import {DebugDBModeBackendSwitch} from '../../../UI/building-blocks/admin/DebugDBModeBackendSwitch.atom';
+import {AppConnectionChecker} from '../../../UI/building-blocks/admin/AppConnectionChecker.molecule';
 
 
 export default function Index() {

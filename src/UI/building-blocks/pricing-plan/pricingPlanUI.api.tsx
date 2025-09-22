@@ -3,7 +3,7 @@ import {
   bestsellersValues,
   PricingPlan,
   pricingPlanDataPLN
-} from "../../../READONLY-shared-kernel/domain/pricing/pricing.config";
+} from '../../../READONLY-shared-kernel/domain/pricing/pricing.config';
 
 
 export const getPricingPlanUI = (pricingValue: PricingPlan | null | undefined, showBestseller: boolean = true): ReactElement => {

@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material'
-import {UserListOrganism} from "../../../../UI/building-blocks/admin/user-list/UserList.organism";
+import {UserListOrganism} from '../../../../UI/building-blocks/admin/user-list/UserList.organism';
 
 
 export default function Index() {

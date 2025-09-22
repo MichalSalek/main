@@ -1,8 +1,8 @@
 import {DateAndTime, IDType} from '../application/application.types'
 import {EVENT_COMMANDS_AND_QUERIES_TYPE} from '../domain/commands-and-queries/cqrs.types'
-import {Trait} from "../domain/gallery/gallery.types";
-import {objectFlip, ValueOf} from "../application/application.utils";
-import {PricingPlan} from "../domain/pricing/pricing.config";
+import {Trait} from '../domain/gallery/gallery.types';
+import {objectFlip, ValueOf} from '../application/application.utils';
+import {PricingPlan} from '../domain/pricing/pricing.config';
 
 
 export const RoleValue = Object.freeze({

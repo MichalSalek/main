@@ -1,5 +1,5 @@
-import {useCallback, useState} from "react";
-import {turnOnAppBusyLoader, turnOnViewLoader} from "../../application/app-loaders/appLoaders.possibilities.api";
+import {useCallback, useState} from 'react';
+import {turnOnAppBusyLoader, turnOnViewLoader} from '../../application/app-loaders/appLoaders.possibilities.api';
 
 export const useAppRefreshHook = () => {
 

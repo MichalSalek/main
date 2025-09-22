@@ -1,6 +1,6 @@
 // Create a Cloudinary instance and set your cloud name.
-import {Cloudinary} from "@cloudinary/url-gen"
-import {ENV_VARS} from "../../../application/environment/environment.config";
+import {Cloudinary} from '@cloudinary/url-gen'
+import {ENV_VARS} from '../../../application/environment/environment.config';
 
 
 export const cloudinary = new Cloudinary({

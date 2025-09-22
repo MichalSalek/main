@@ -3,7 +3,7 @@ import {ReactElement, useCallback} from 'react'
 import {pushNewSnackbar} from '../../../application/app-snackbar/appSnackbar.possibilities.api'
 import {callHTTPEndpoint} from '../../../application/http-layer/http.operations.api'
 import {ENDPOINT_CHECK_WEBAPP_SIMPLE, EndpointProps} from '../../../READONLY-shared-kernel/domain/http/http.endpoints'
-import {ENV_VARS} from "../../../application/environment/environment.config";
+import {ENV_VARS} from '../../../application/environment/environment.config';
 
 
 export const AppConnectionChecker = (): ReactElement | undefined => {

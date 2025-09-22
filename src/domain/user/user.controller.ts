@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react'
 import {useAppDispatch, useAppSelector} from '../../application/store/store'
-import {sessionGetCurrent_IO} from '../session-actions/sessionIO.operations.api'
+import {sessionGetCurrent_IO} from '../session/sessionIO.operations.api'
 import {STORE_SEL_user_currentUser} from './user.read'
 
 

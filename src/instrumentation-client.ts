@@ -2,18 +2,18 @@
 // The added config here will be used whenever a users loads a page in their browser.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-import * as Sentry from "@sentry/nextjs";
+import * as Sentry from '@sentry/nextjs';
 
 if (process.env.NODE_ENV === 'production') {
   Sentry.init({
-    dsn: "https://5a7f47ef065198cbc08ae0a3ae73affa@o4510039948001280.ingest.de.sentry.io/4510039951081552",
+    dsn: 'https://5a7f47ef065198cbc08ae0a3ae73affa@o4510039948001280.ingest.de.sentry.io/4510039951081552',
 
     enabled: process.env.NODE_ENV === 'production',
 
     // Add optional integrations for additional features
     integrations: [
       Sentry.replayIntegration(),
-      Sentry.consoleLoggingIntegration({ levels: ["log", "warn", "error"] }),
+      Sentry.consoleLoggingIntegration({levels: ['log', 'warn', 'error']}),
     ],
 
     // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.

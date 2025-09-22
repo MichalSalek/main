@@ -5,7 +5,7 @@ import {VALIDATION_POLICY} from '../../../READONLY-shared-kernel/policies/valida
 import {
   deleteFromClientStorage,
   getFromClientStorage
-} from "../../../application/client-device-storage/clientStorage.possibilities.api";
+} from '../../../application/client-device-storage/clientStorage.possibilities.api';
 
 
 export const EmailInputAtom = ({

@@ -1,17 +1,17 @@
-import {Button, Stack} from "@mui/material";
-import {getDateForUI, getUserAgentForUI} from "../../../features/UI.utils.api";
-import {useAppSelector} from "../../../../application/store/store";
-import {STORE_SEL_user_currentUser} from "../../../../domain/user/user.read";
-import {useLogoutUserHook} from "../../../application-hooks/useLogoutUser.hook";
-import {useCallback, useState} from "react";
-import {EventLog, EventLogTypeValue, Session} from "../../../../READONLY-shared-kernel/models/db_models";
+import {Button, Stack} from '@mui/material';
+import {getDateForUI, getUserAgentForUI} from '../../../features/UI.utils.api';
+import {useAppSelector} from '../../../../application/store/store';
+import {STORE_SEL_user_currentUser} from '../../../../domain/user/user.read';
+import {useLogoutUserHook} from '../../../application-hooks/useLogoutUser.hook';
+import {useCallback, useState} from 'react';
+import {EventLog, EventLogTypeValue, Session} from '../../../../READONLY-shared-kernel/models/db_models';
 import {
   deleteSessionAll_IO,
   deleteSessionExactly_IO,
   getAllSessions_IO
-} from "../../../../domain/session-actions/sessionIO.possibilities.api";
-import {getEventLogs_IO} from "../../../../domain/event-log-actions/eventLogIO.possibilities.api";
-import {useFireOnMountHook} from "@msalek/utils";
+} from '../../../../domain/session/sessionIO.possibilities.api';
+import {getEventLogs_IO} from '../../../../domain/event-log-actions/eventLogIO.possibilities.api';
+import {useFireOnMountHook} from '@msalek/utils';
 
 export const LoggedDevicesMolecule = () => {
   const currentUser = useAppSelector(STORE_SEL_user_currentUser)

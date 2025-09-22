@@ -1,5 +1,5 @@
 import {getDateNowInString} from '@msalek/utils'
-import {IS_DEVELOPMENT_ENV, IS_PRODUCTION_ENV} from '../environment/environment.utils.api'
+import {IS_DEVELOPMENT_ENV} from '../environment/environment.utils.api'
 import {SendToErrorTracker, sendToErrorTracker} from './errorTracker.possibilities.api'
 
 

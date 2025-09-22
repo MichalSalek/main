@@ -18,15 +18,15 @@ import {
 import {EVENTS_POLICY} from '../../../READONLY-shared-kernel/policies/events.policy'
 import {PERMISSIONS_POLICY} from '../../../READONLY-shared-kernel/policies/permissions.policy'
 import {theme} from '../../styles/theme'
-import {getAppIcon} from "../../../domain/app-icons/adapters/MuiIcons.adapter";
-import {allowedEventLogTypes} from "../../../READONLY-shared-kernel/domain/event-log/event_log.config";
-import {activeAccountStates} from "../../../READONLY-shared-kernel/domain/user-and-account/user_and_account.config";
+import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {allowedEventLogTypes} from '../../../READONLY-shared-kernel/domain/event-log/event_log.config';
+import {activeAccountStates} from '../../../READONLY-shared-kernel/domain/user-and-account/user_and_account.config';
 import {
   annualDiscountPercentageNumber,
   bestsellersValues,
   defaultPricingPlanPeriod,
   pricingPlanDataPLN
-} from "../../../READONLY-shared-kernel/domain/pricing/pricing.config";
+} from '../../../READONLY-shared-kernel/domain/pricing/pricing.config';
 
 
 export const PolicyOrganism = (): ReactElement => {

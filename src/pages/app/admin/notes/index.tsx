@@ -1,5 +1,5 @@
 import {Typography} from '@mui/material'
-import {NotesOrganism} from "../../../../UI/building-blocks/admin/notes/Notes.organism";
+import {NotesOrganism} from '../../../../UI/building-blocks/admin/notes/Notes.organism';
 
 export default function Index() {
 

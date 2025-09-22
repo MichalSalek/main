@@ -1,12 +1,12 @@
 import {Checkbox, ListItemText, MenuItem, Select, SelectChangeEvent} from '@mui/material'
 import {ReactElement, useCallback, useState} from 'react'
-import {Role, RoleValue} from "../../../../../READONLY-shared-kernel/models/db_models";
-import {STYLES_POLICY} from "../../../../../READONLY-shared-kernel/policies/styles.policy";
-import {useFilterGenericHook} from "./generics/useFilterGeneric.hook";
-import {FilterWrapperComposition} from "./generics/FilterWrapper.composition";
-import {FilterSelectedValuesAtom} from "./generics/FilterSelectedValues.atom";
-import {FiltersCallbackProps} from "./Filters.container";
-import {getRoleUI} from "../../../account-and-user-operations/userAndAccountUI.api";
+import {Role, RoleValue} from '../../../../../READONLY-shared-kernel/models/db_models';
+import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {useFilterGenericHook} from './generics/useFilterGeneric.hook';
+import {FilterWrapperComposition} from './generics/FilterWrapper.composition';
+import {FilterSelectedValuesAtom} from './generics/FilterSelectedValues.atom';
+import {FiltersCallbackProps} from './Filters.container';
+import {getRoleUI} from '../../../account-and-user-operations/userAndAccountUI.api';
 
 
 export const FilterRoleMolecule = ({callback}: FiltersCallbackProps): ReactElement => {

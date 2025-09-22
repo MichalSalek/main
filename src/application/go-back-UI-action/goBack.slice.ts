@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
-import {GoBackSliceData, initialGoBackSliceData} from "./goBack.read";
-import {REMEMBER_LAST_XX_VIEWS_HISTORY_RECORDS} from "./goBack.config";
+import {GoBackSliceData, initialGoBackSliceData} from './goBack.read';
+import {REMEMBER_LAST_XX_VIEWS_HISTORY_RECORDS} from './goBack.config';
 
 
 export const goBackSlice = createSlice({
