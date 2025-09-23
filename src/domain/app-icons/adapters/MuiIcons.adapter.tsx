@@ -28,7 +28,7 @@ import ShoppingCartCheckoutTwoToneIcon from '@mui/icons-material/ShoppingCartChe
 import DevicesTwoToneIcon from '@mui/icons-material/DevicesTwoTone';
 import FilterAltTwoToneIcon from '@mui/icons-material/FilterAltTwoTone';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import NotificationsIcon from '@mui/icons-material/NotificationsOutlined';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';

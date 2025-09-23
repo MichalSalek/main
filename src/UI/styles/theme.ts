@@ -217,7 +217,10 @@ export const theme: Theme = createTheme({
     MuiIconButton: {
       styleOverrides: {
         root: {
-          borderRadius: 0
+          borderRadius: 0,
+          ':hover': {
+            background: 'none'
+          }
         },
       }
     },

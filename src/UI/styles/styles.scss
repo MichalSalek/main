@@ -6,7 +6,23 @@
   padding: 0;
   margin: 0;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
+
+input,
+textarea,
+button,
+select,
+a {
+
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transition: opacity 100ms ease;
+    opacity: 0.5;
+  }
+}
+
 
 @keyframes fadein {
   0%, 80% {
