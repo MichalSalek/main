@@ -57,8 +57,8 @@ export const AccountIconAtom = ({loading}: Props) => {
       }}>
       <CircularProgress
         color={'primary'}
-        size={30}
-        thickness={5}
+        size={26}
+        thickness={4}
       />
     </Box>)}
 
