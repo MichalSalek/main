@@ -8,6 +8,7 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward'
 import ArrowRightSharpIcon from '@mui/icons-material/ArrowRightSharp';
 import LogoutIcon from '@mui/icons-material/Logout';
 import AccountOutlinedCircleIcon from '@mui/icons-material/AccountCircleOutlined';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import AdminPanelSettingsTwoToneIcon from '@mui/icons-material/AdminPanelSettingsTwoTone';
 import RefreshSharpIcon from '@mui/icons-material/RefreshSharp';
@@ -27,6 +28,10 @@ import ShoppingCartCheckoutTwoToneIcon from '@mui/icons-material/ShoppingCartChe
 import DevicesTwoToneIcon from '@mui/icons-material/DevicesTwoTone';
 import FilterAltTwoToneIcon from '@mui/icons-material/FilterAltTwoTone';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import NotificationsIcon from '@mui/icons-material/NotificationsOutlined';
+import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
+import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
 
 
 export const getAppIcon = Object.freeze({
@@ -43,15 +48,19 @@ export const getAppIcon = Object.freeze({
   Upload: (props?: SvgIconOwnProps) => <CloudUploadOutlinedIcon {...props}/>,
 
   Logout: (props?: SvgIconOwnProps) => <LogoutIcon {...props}/>,
-
+  Notification: (props?: SvgIconOwnProps) => <NotificationsIcon {...props}/>,
   Loading: (props?: SvgIconOwnProps) => <HourglassTopRoundedIcon {...props}/>,
 
-  Account: (props?: SvgIconOwnProps) => <AccountOutlinedCircleIcon {...props}/>,
+  Account: (props?: SvgIconOwnProps & {variant?: 'contained'}) => props?.variant === 'contained' ? <AccountCircle {...props} /> : <AccountOutlinedCircleIcon {...props}/>,
   PricingPlan: (props?: SvgIconOwnProps) => <ShoppingCartCheckoutTwoToneIcon {...props}/>,
   Home: (props?: SvgIconOwnProps) => <HomeOutlinedIcon {...props}/>,
   Admin: (props?: SvgIconOwnProps) => <AdminPanelSettingsTwoToneIcon {...props}/>,
   Refresh: (props?: SvgIconOwnProps) => <RefreshSharpIcon {...props}/>,
   HistoryBack: (props?: SvgIconOwnProps) => <ReplyAllRoundedIcon {...props}/>,
+
+  Contact: (props?: SvgIconOwnProps) => <QuestionAnswerOutlinedIcon {...props}/>,
+  Features: (props?: SvgIconOwnProps) => <RocketLaunchTwoToneIcon {...props}/>,
+  Heart: (props?: SvgIconOwnProps) => <FavoriteTwoToneIcon {...props}/>,
 
   Devices: (props?: SvgIconOwnProps) => <DevicesTwoToneIcon {...props}/>,
 

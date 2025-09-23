@@ -29,9 +29,9 @@ export const SessionInfoMolecule = () => {
       gap: STYLES_POLICY.spacing[1],
       alignItems: 'center',
       textAlign: 'right',
-      visibility: currentUser?.user_id
-        ? 'visible'
-        : 'hidden'
+      display: currentUser?.user_id
+        ? undefined
+        : 'none'
     }}>
     <Stack>
       <Typography variant={'caption'}>Twoja sesja wygaśnie</Typography>

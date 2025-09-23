@@ -100,7 +100,8 @@ export const theme: Theme = createTheme({
           borderRadius: STYLES_POLICY.borderRadius[2],
           margin: STYLES_POLICY.spacing[1],
           minHeight: '30px',
-          minWidth: ' 80px'
+          minWidth: '80px',
+          lineHeight: 'normal'
         }
       }
     },
@@ -228,7 +229,8 @@ export const theme: Theme = createTheme({
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          minWidth: '100%'
+          minWidth: '100%',
+          bottom: STYLES_POLICY.appBarDimension
         }
       }
     },

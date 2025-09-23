@@ -37,6 +37,7 @@
     "react": "^19",
     "react-advanced-cropper": "0.20.1",
     "react-dom": "^19",
+    "react-hook-form": "^7.63.0",
     "react-redux": "^9",
     "react-virtuoso": "^4",
     "redux-persist": "^6",

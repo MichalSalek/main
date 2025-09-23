@@ -1,5 +1,5 @@
 import {ChangeEvent, useCallback, useEffect, useRef, useState} from 'react';
-import {useSetLoadingIcon} from '../../../app-menu/dynamicMenu.possibilities.api';
+import {useSetLoadingIcon} from '../../../floating-partials/app-menu/dynamicMenu.possibilities.api';
 import {pushNewSnackbar} from '../../../../../application/app-snackbar/appSnackbar.possibilities.api';
 import {
   turnOffAppBusyLoader,

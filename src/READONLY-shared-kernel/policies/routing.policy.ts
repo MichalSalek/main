@@ -22,7 +22,7 @@ export type ROUTING_POLICY_TYPE = {
     GET_ROUTE_FRONT_PATH: (routeName: ROUTES_FRONT_NAME | string | null) => ROUTES_FRONT_PATH | null
     GET_ROUTE_FRONT_NAME: (routePath: ROUTES_FRONT_PATH | string | null) => ROUTES_FRONT_NAME | null
     GET_ROUTE_API_PATH: (routeName: ROUTES_API_NAME) => ROUTES_API_PATH
-    IS_REDIRECTION_NEEDED: (redirectionRoutePath: ROUTES_FRONT_PATH, currentPathname?: ROUTES_FRONT_PATH) => boolean
+    IS_THE_SAME_PATH: (redirectionRoutePath: ROUTES_FRONT_PATH, currentPathname?: ROUTES_FRONT_PATH) => boolean
     REDIRECT_BY_NEXT_ROUTER: (routePath: ROUTES_FRONT_PATH, router: NextRouter) => {
       willBeRedirect: boolean,
       redirectAction: () => Promise<boolean>
@@ -64,11 +64,11 @@ export const ROUTING_POLICY: ROUTING_POLICY_TYPE = {
       return ROUTES_API[routeName]
     },
 
-    IS_REDIRECTION_NEEDED: (redirectionRoutePath, currentPathname) => (
-      currentPathname
-        ? currentPathname
-        : window.location.pathname) !== redirectionRoutePath,
-
+    IS_THE_SAME_PATH: (redirectionRoutePath, currentPathname) => {
+      const currentPath = ROUTING_POLICY.utils.NORMALIZE_PATH(currentPathname ? currentPathname : window.location.pathname)
+      const requestedPath = ROUTING_POLICY.utils.NORMALIZE_PATH(redirectionRoutePath)
+      return currentPath === requestedPath
+    },
 
     IS_EXISTS_REDIRECTION_FOR_PASSED_EVENT: (event) => {
       return Object.keys(REDIRECTIONS_ON_EVENTS ?? {})
@@ -76,7 +76,7 @@ export const ROUTING_POLICY: ROUTING_POLICY_TYPE = {
         .includes(event ?? '')
     },
     REDIRECT_BY_NEXT_ROUTER: (routePath, router) => {
-      const willBeRedirect = ROUTING_POLICY.utils.IS_REDIRECTION_NEEDED(routePath)
+      const willBeRedirect = !ROUTING_POLICY.utils.IS_THE_SAME_PATH(routePath)
       const redirectAction = async () => {
         return await router.replace(routePath)
       }

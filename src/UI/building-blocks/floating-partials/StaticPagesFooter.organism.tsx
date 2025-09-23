@@ -3,7 +3,7 @@ import {theme} from '../../styles/theme'
 import {CopyrightAtom} from '../_wide-use-components/Copyright.atom';
 
 
-export const StaticPagesFooterMolecule = () => {
+export const StaticPagesFooterOrganism = () => {
 
   return <Stack component={'footer'}>
 

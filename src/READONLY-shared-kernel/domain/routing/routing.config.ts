@@ -6,6 +6,8 @@ import {ROUTES_FRONT_PATH} from './routing.types'
 export const ROUTES_FRONT_STATIC = Object.freeze({
   HOME: '/',
   PRICING: '/pricing',
+  CONTACT: '/contact',
+  FEATURES: '/features',
 
   USER_LOG: '/user/login',
   USER_REG: '/user/register/identifier',

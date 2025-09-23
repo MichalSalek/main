@@ -1,5 +1,5 @@
-import {useSetActonButtonsHook} from '../../application-hooks/useSetActonButtons.hook';
-import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {useSetActonButtonsHook} from '../../../application-hooks/useSetActonButtons.hook';
+import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
 import {useCallback} from 'react';
 
 

@@ -2,15 +2,16 @@ import {Box, Button, SwipeableDrawer} from '@mui/material'
 import * as React from 'react'
 import {ReactElement, useCallback, useMemo, useState} from 'react'
 import {DrawerToggleMenu} from './drawer.types';
-import {DrawerListItems} from './DrawerListItems.molecule';
-import {STYLES_POLICY} from '../../../../READONLY-shared-kernel/policies/styles.policy';
-import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {getAppIcon} from '../../../../../domain/app-icons/adapters/MuiIcons.adapter';
+import {DrawerListContainer} from './DrawerListContainer.molecule';
 
 
 const iOS =
-  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent);
+  typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent)
 
 export const DrawerOrganism = (): ReactElement => {
+
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -62,10 +63,10 @@ export const DrawerOrganism = (): ReactElement => {
       disableBackdropTransition={!iOS}
       disableDiscovery={iOS}
       swipeAreaWidth={0}
+      disableScrollLock={true}
     >
 
-      <DrawerListItems toggleMenuCallback={toggleMenuCallback}/>
-
+      <DrawerListContainer toggleMenuCallback={toggleMenuCallback}/>
 
     </SwipeableDrawer>
 

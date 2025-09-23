@@ -2,5 +2,6 @@
 <project version="4">
   <component name="EslintConfiguration">
     <work-dir-patterns value="\\wsl.localhost\Ubuntu\home\ms\app-FRAMEWORK\main" />
+    <option name="fix-on-save" value="true" />
   </component>
 </project>

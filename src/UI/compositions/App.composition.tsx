@@ -4,7 +4,7 @@ import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
 import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
 import {AppDynamicMenuContext} from '../../application/app-dynamic-menu/appDynamicMenu.context';
 import {useAppDynamicMenuContext} from '../../application/app-dynamic-menu/useAppDynamicMenuContext.hook';
-import {AppMenuMolecule} from '../building-blocks/app-menu/AppMenu.molecule';
+import {AppMenuOrganism} from '../building-blocks/floating-partials/app-menu/AppMenu.organism';
 import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
 import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
 
@@ -18,10 +18,7 @@ export const AppComposition = ({children}: Props): ReactElement => {
   const AppDynamicMenuContextValue = useAppDynamicMenuContext()
 
 
-  return <Stack
-    sx={{
-      paddingBottom: STYLES_POLICY.appBarDimension
-    }}>
+  return <Stack>
 
     <AppDynamicMenuContext.Provider value={AppDynamicMenuContextValue}>
 
@@ -53,7 +50,8 @@ export const AppComposition = ({children}: Props): ReactElement => {
                     position: 'sticky',
                     right: 0,
                     zIndex: 1,
-                    top: STYLES_POLICY.spacing[1],
+                    top: `calc(${STYLES_POLICY.appBarDimension} + ${STYLES_POLICY.spacing[1]})`,
+                    paddingBottom: STYLES_POLICY.spacing[2],
                     marginLeft: 'auto',
                     width: 'fit-content',
                     flexDirection: 'row',
@@ -76,8 +74,6 @@ export const AppComposition = ({children}: Props): ReactElement => {
         </Stack>
 
       </Stack>
-
-      <AppMenuMolecule/>
 
     </AppDynamicMenuContext.Provider>
 

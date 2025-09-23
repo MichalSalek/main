@@ -2,8 +2,7 @@ import {Box, Container, Stack} from '@mui/material'
 import {ReactElement} from 'react'
 import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
 import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
-import {StaticPagesFooterMolecule} from '../building-blocks/headers-and-footers/StaticPagesFooter.molecule';
-import {HeaderMolecule} from '../building-blocks/headers-and-footers/Header.molecule';
+import {StaticPagesFooterOrganism} from '../building-blocks/floating-partials/StaticPagesFooter.organism';
 import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
 import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
 
@@ -14,7 +13,10 @@ type Props = {
 
 export const StaticPagesComposition = ({children}: Props): ReactElement => {
 
-  return <Stack>
+  return <Stack
+    sx={{
+      paddingBottom: STYLES_POLICY.appBarDimension
+    }}>
     <Stack
       sx={{
         height: '100%'
@@ -34,8 +36,6 @@ export const StaticPagesComposition = ({children}: Props): ReactElement => {
             position: 'relative'
           }}
         >
-
-          <HeaderMolecule/>
 
           <BusyAppLoaderComposition>
             <ViewLoaderComposition>
@@ -65,7 +65,7 @@ export const StaticPagesComposition = ({children}: Props): ReactElement => {
 
     </Stack>
 
-    <StaticPagesFooterMolecule/>
+    <StaticPagesFooterOrganism/>
 
   </Stack>
 }

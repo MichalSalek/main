@@ -6,10 +6,9 @@ import {ROUTES_FRONT} from '../READONLY-shared-kernel/domain/routing/routing.con
 import {LinkAtom} from '../UI/building-blocks/_wide-use-components/Link.atom'
 
 
-export const config = {amp: 'hybrid'}
 
 export default function Home() {
-  const router = useRouter()
+
   const currentUser = useAppSelector(STORE_SEL_user_currentUser)
 
   return (

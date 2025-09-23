@@ -16,7 +16,11 @@ export const LogoAtom = (): ReactElement => {
   return <Image
     src={logo}
     alt={'logo'}
-    height={Number.parseInt(STYLES_POLICY.appBarDimension) - 30}
+    height={Number.parseInt(STYLES_POLICY.appBarDimension) - 40}
     loading={'eager'}
-    onClick={onClickHomeCallback}></Image>
+    onClick={onClickHomeCallback}
+    style={{
+      cursor: 'pointer'
+    }}
+  ></Image>
 }

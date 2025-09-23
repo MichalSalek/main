@@ -16,7 +16,7 @@ import {
 } from '../../../../../domain/gallery/gallery-records.config';
 import {useLoadImageHook} from './useLoadImage.hook';
 import {getAppIcon} from '../../../../../domain/app-icons/adapters/MuiIcons.adapter';
-import {useSetLoadingIcon} from '../../../app-menu/dynamicMenu.possibilities.api';
+import {useSetLoadingIcon} from '../../../floating-partials/app-menu/dynamicMenu.possibilities.api';
 import {freezeThreadAndWait} from '@msalek/utils';
 import {
   turnOffAppBusyLoader,

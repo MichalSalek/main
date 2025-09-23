@@ -107,13 +107,13 @@ export default function Register() {
 
         <Stack component={'form'} onSubmit={registerAccountCallback}>
           <Typography variant={'h1'}>
-            W tym miejscu utworzysz konto w aplikacji.
+            Utwórz bezpłatne konto.
           </Typography>
           <Typography variant={'body1'}>
             Płatność nie będzie jeszcze wymagana.
           </Typography>
           <Typography variant={'body1'}>
-            Będziesz nadal mieć możliwość zmiany swojego planu.
+            Będziesz nadal mieć możliwość wyboru planu płatności.
           </Typography>
 
           <EmailInputAtom

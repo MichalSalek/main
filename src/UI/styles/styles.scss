@@ -26,15 +26,14 @@
   animation-timing-function: ease-in;
 }
 
-html, body, #__next {
-  min-height: 100%;
-  height: 100%;
-}
-
 html {
   @extend .fadein-animation;
   font-size: 14px;
   font-family: "Verdana", sans-serif;
+}
+
+body {
+  overflow-y: scroll;
 }
 
 html,
