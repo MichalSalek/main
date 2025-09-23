@@ -9,7 +9,7 @@
     "preview": "npx --yes dotenv-run-script .env.preview --",
     "production": "npx --yes dotenv-run-script .env.production --",
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run lint && next build",
     "start": "next start",
     "lint": "eslint --fix .",
     "test": "npm run lint"
@@ -23,6 +23,7 @@
     "@msalek/utils": "^2",
     "@mui/icons-material": "^7",
     "@mui/material": "^7",
+    "@next/eslint-plugin-next": "^15.5.4",
     "@reduxjs/toolkit": "^2",
     "@sentry/nextjs": "^10.12.0",
     "@tiptap/extension-bubble-menu": "^2.10.3",
