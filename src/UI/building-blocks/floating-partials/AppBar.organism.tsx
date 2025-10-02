@@ -8,7 +8,7 @@ import {LoggedToolbarMolecule} from './LoggedToolbar.molecule';
 import {AccountIconAtom} from './AccountIcon.atom';
 import {STORE_SEL_user_currentUser} from '../../../domain/user/user.read';
 import {theme} from '../../styles/theme';
-import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../styles/styles.policy';
 
 
 export const AppBarOrganism = () => {
@@ -21,7 +21,7 @@ export const AppBarOrganism = () => {
   return <AppBar
     sx={{
       height: STYLES_POLICY.appBarDimension,
-      borderTop: 'unset',
+      border: 'unset',
       flexDirection: 'row',
       justifyContent: 'space-between',
       background: theme.palette.background.default,

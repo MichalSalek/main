@@ -336,20 +336,20 @@ export const VALIDATION_POLICY = {
         __isValid: false,
         __general: '',
         asset_url: '',
-        traits: '',
-        color_traits: ''
+        asset_traits: '',
+        asset_color_traits: ''
       }
 
       if (!data.asset_url) {
-        returnObject.asset_url += 'Missing asset url to upload. '
+        returnObject.asset_url += 'Najpierw dodaj zdjęcie. '
       }
 
-      if (data.traits.length === 0) {
-        returnObject.traits += 'Add at least one trait. '
+      if (data.asset_traits.length === 0) {
+        returnObject.asset_traits += 'Dodaj przynajmniej jedną cechę stylistyczną. '
       }
 
-      if (data.color_traits.length === 0) {
-        returnObject.color_traits += 'Add at least one color trait. '
+      if (data.asset_color_traits.length === 0) {
+        returnObject.asset_color_traits += 'Dodaj przynajmniej jedną cechę kolorystyczną. '
       }
 
 

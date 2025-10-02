@@ -1,6 +1,6 @@
 import {Checkbox, ListItemText, MenuItem, Select, SelectChangeEvent} from '@mui/material'
 import {ReactElement, useCallback, useState} from 'react'
-import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../../../styles/styles.policy';
 import {useFilterGenericHook} from './generics/useFilterGeneric.hook';
 import {FilterWrapperComposition} from './generics/FilterWrapper.composition';
 import {FilterSelectedValuesAtom} from './generics/FilterSelectedValues.atom';

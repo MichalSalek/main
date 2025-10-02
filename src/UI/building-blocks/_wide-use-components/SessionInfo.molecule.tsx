@@ -4,7 +4,7 @@ import {useAppSelector} from '../../../application/store/store'
 import {refreshSession_IO} from '../../../domain/session/sessionIO.possibilities.api'
 import {getDateForUI} from '../../features/UI.utils.api'
 import {STORE_SEL_user_currentUser} from '../../../domain/user/user.read'
-import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../styles/styles.policy';
 
 
 export const SessionInfoMolecule = () => {

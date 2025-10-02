@@ -4,7 +4,7 @@ import {RefObject, startTransition, useCallback, useContext, useRef, useState} f
 import {IDType} from '../../../../../READONLY-shared-kernel/application/application.types';
 import {Stack, Typography} from '@mui/material';
 import {FilterAccountStatusMolecule} from './FilterAccountStatus.molecule';
-import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../../../styles/styles.policy';
 import {FilterUserIsActiveMolecule} from './FilterUserIsActive.molecule';
 import {FilterEmailMolecule} from './FilterEmail.molecule';
 import {AdminContext} from '../../../../../domain/admin/admin.context';

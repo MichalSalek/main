@@ -10,7 +10,7 @@ import {LinkAtom} from '../_wide-use-components/Link.atom'
 import {PricingPlanWithPaymentMolecule} from '../pricing-plan/PricingPlanWithPayment.molecule'
 import {getPricingPlanUI} from '../pricing-plan/pricingPlanUI.api';
 import {getAccountStatusUI} from './userAndAccountUI.api';
-import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../styles/styles.policy';
 import {LoggedDevicesMolecule} from './molecules/LoggedDevices.molecule';
 import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
 import {useFireOnMountHook} from '@msalek/utils';

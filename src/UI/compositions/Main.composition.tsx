@@ -15,15 +15,17 @@ import {useUserMetadataController} from '../../domain/user/useUserMetadata.contr
 import {initRoutingInterceptor} from '../../domain/redirections-and-routing/routing.interceptor';
 import {AppSnackbarsController} from '../../application/app-snackbar/sonner-adapter/AppSnackbars.controller';
 import {useInitCurrentUserController} from '../../domain/user/user.controller';
+import {PagePropsWrapper} from '../../pages/_app';
 
 
 type Props = {
   children: ReactElement
-}
+} & PagePropsWrapper
 
 export const MainComposition = (
   {
-    children
+    children,
+    pageProps
   }: Props): ReactElement => {
   return <>
     <HeadMolecule/>
@@ -50,7 +52,7 @@ export const MainComposition = (
 
           <BrickWallAppLoaderComposition>
 
-            <UIComposition>
+            <UIComposition pageProps={pageProps}>
 
               {children}
 

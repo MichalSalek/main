@@ -1,8 +1,6 @@
 import {Button, Dialog, IconButton, Stack, Switch, Toolbar, Typography} from '@mui/material';
-import {SelectAnyTraitsInputMolecule} from '../gallery-records/add-new/SelectAnyTraitsInput.molecule';
-import {useGetGalleryConfig} from '../hooks/useGetGalleryConfig.hook';
-import {ChangeEvent, useCallback, useContext, useEffect, useRef, useState} from 'react';
-import {Trait} from '../../../../READONLY-shared-kernel/domain/gallery/gallery.types';
+import {EditTraitsFormMolecule} from '../gallery-records/traits/EditTraitsForm.molecule';
+import {ChangeEvent, useCallback, useContext, useEffect, useState} from 'react';
 import {useAppDispatch, useAppSelector} from '../../../../application/store/store';
 import {STORE_SEL_gallery_filtersStrictSwitch} from '../../../../domain/gallery/gallery.read';
 import {STORE_SET_gallery_filtersStrictSwitch} from '../../../../domain/gallery/gallery.slice';
@@ -12,15 +10,16 @@ import {GalleryRecord} from '../../../../READONLY-shared-kernel/models/db_models
 import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
 import {useSetActonButtonsHook} from '../../../application-hooks/useSetActonButtons.hook';
 import {GalleryDataContext} from '../../../../domain/gallery/gallery-data/galleryData.context';
+import {TraitsPartial} from '../../../../domain/gallery/traits.types';
 
 export const GalleryFiltersMolecule = () => {
 
   const {galleryRecords, setGalleryRecords} = useContext(GalleryDataContext)
 
-  const {galleryConfig} = useGetGalleryConfig()
-
-  const selectedTraitsRef = useRef<Trait[]>([])
-  const selectedColorTraitsRef = useRef<Trait[]>([])
+  const [selectedTraits, setSelectedTraits] = useState<TraitsPartial>({
+    asset_traits: [],
+    asset_color_traits: []
+  })
 
   const strictFilter = useAppSelector(STORE_SEL_gallery_filtersStrictSwitch)
   const dispatch = useAppDispatch()
@@ -28,7 +27,7 @@ export const GalleryFiltersMolecule = () => {
   const [filterActionDisabledState, setFilterActionDisabledState] = useState<boolean>(false)
 
 
-  const [isFiltersViewOpen, setFiltersViewOpen] = useState(false)
+  const [isViewOpen, setFiltersViewOpen] = useState(false)
 
   const setActionButtons = useSetActonButtonsHook()
 
@@ -36,18 +35,18 @@ export const GalleryFiltersMolecule = () => {
     setActionButtons([{
       title: 'FILTRY',
       action: () => setFiltersViewOpen(true),
-      icon: getAppIcon.Filter()
+      icon: getAppIcon.Filter
     }])
   }, [setActionButtons])
 
-  const handleCloseCreateFiltersView = useCallback(() => {
+  const handleCloseView = useCallback(() => {
     setFiltersViewOpen(false)
   }, [])
 
   const onFiltersAction = useCallback((data: GalleryRecord[]) => {
-    handleCloseCreateFiltersView()
+    handleCloseView()
     setGalleryRecords(data)
-  }, [handleCloseCreateFiltersView, setGalleryRecords])
+  }, [handleCloseView, setGalleryRecords])
 
 
   const handleChangeStrictSwitch = (event: ChangeEvent<HTMLInputElement>) => {
@@ -57,8 +56,8 @@ export const GalleryFiltersMolecule = () => {
   const getGalleryRecordsClosure = useCallback(async () => {
     setFilterActionDisabledState(true)
     await getGalleryRecords_IO({
-        asset_traits: selectedTraitsRef.current,
-        asset_color_traits: selectedColorTraitsRef.current,
+        asset_traits: selectedTraits.asset_traits,
+        asset_color_traits: selectedTraits.asset_color_traits,
         apply_strict_filter: strictFilter
       },
       async (response) => {
@@ -71,29 +70,25 @@ export const GalleryFiltersMolecule = () => {
     await freezeThreadAndWait(1000)
     setFilterActionDisabledState(false)
 
-  }, [onFiltersAction, strictFilter])
+  }, [onFiltersAction, selectedTraits.asset_color_traits, selectedTraits.asset_traits, strictFilter])
 
 
   useFireOnMountHook(getGalleryRecordsClosure)
 
 
   return <Dialog
-    keepMounted={true}
-    fullScreen
-    open={isFiltersViewOpen}
-    onClose={handleCloseCreateFiltersView}
-    disableEscapeKeyDown
+    open={isViewOpen}
+    onClose={handleCloseView}
   >
     <Toolbar sx={{
       justifyContent: 'flex-end',
     }}>
       <IconButton
-        edge={'end'}
         color="inherit"
-        onClick={handleCloseCreateFiltersView}
+        onClick={handleCloseView}
         aria-label="close"
       >
-        {getAppIcon.Back()}
+        {getAppIcon.Back()} <Typography variant={'overline'}>Wróć</Typography>
       </IconButton>
     </Toolbar>
 
@@ -101,13 +96,10 @@ export const GalleryFiltersMolecule = () => {
       width: '100%'
     }}>
       <Typography variant={'h3'}>Filtry</Typography>
-      <SelectAnyTraitsInputMolecule
-        galleryConfig={galleryConfig} valuesRef={selectedTraitsRef}
-        traitsType={'records_traits'} disableAdding={true}/>
-      <SelectAnyTraitsInputMolecule
-        galleryConfig={galleryConfig} valuesRef={selectedColorTraitsRef}
-        traitsType={'records_color_traits'}
-        disableAdding={true}/>
+      <EditTraitsFormMolecule
+        selectedTraits={selectedTraits}
+        setSelectedTraits={setSelectedTraits}
+      />
       <Stack flexDirection={'row'} alignItems={'center'}>
         <Typography variant={'caption'}>Wyszukaj dokładnie</Typography>
         <Switch
@@ -115,7 +107,7 @@ export const GalleryFiltersMolecule = () => {
           onChange={handleChangeStrictSwitch}
         />
       </Stack>
-      <Button onClick={getGalleryRecordsClosure} disabled={filterActionDisabledState}>Wyświetl wyniki</Button>
+      <Button onClick={getGalleryRecordsClosure} disabled={filterActionDisabledState}>Filtruj (23)</Button>
 
 
       {galleryRecords?.length === 0 ?

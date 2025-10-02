@@ -1,9 +1,11 @@
 import {Box, Chip} from '@mui/material'
-import {STYLES_POLICY} from '../../../../../../READONLY-shared-kernel/policies/styles.policy'
+import {STYLES_POLICY} from '../../../../../styles/styles.policy'
 import {ReactElement} from 'react'
 
 
-export const FilterSelectedValuesAtom = <T extends string | number>(props: { values: T[] }): ReactElement => {
+export const FilterSelectedValuesAtom = <T extends string | number>(props: {
+  values: T[] | undefined
+}): ReactElement => {
   return <Box sx={{
     display: 'flex',
     flexWrap: 'wrap',
@@ -11,7 +13,7 @@ export const FilterSelectedValuesAtom = <T extends string | number>(props: { val
     padding: STYLES_POLICY.spacing[1]
   }}>
     {(props.values ?? []).map((value) => (
-      <Chip size={'small'} color={'secondary'} key={value} label={value}/>
+      <Chip color={'secondary'} key={value} label={value}/>
     ))}
   </Box>
 }

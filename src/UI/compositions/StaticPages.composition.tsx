@@ -3,13 +3,14 @@ import {ReactElement} from 'react'
 import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
 import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
 import {StaticPagesFooterOrganism} from '../building-blocks/floating-partials/StaticPagesFooter.organism';
-import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../styles/styles.policy';
 import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
+import {PagePropsWrapper} from '../../pages/_app';
 
 
 type Props = {
   children: ReactElement,
-}
+} & PagePropsWrapper
 
 export const StaticPagesComposition = ({children}: Props): ReactElement => {
 
@@ -29,6 +30,7 @@ export const StaticPagesComposition = ({children}: Props): ReactElement => {
         }}>
 
         <Container
+          disableGutters={true}
           sx={{
             paddingTop: STYLES_POLICY.spacing[1],
             paddingBottom: STYLES_POLICY.spacing[1],

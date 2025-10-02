@@ -1,6 +1,6 @@
 import {Box, SxProps, TextField, Theme, Typography} from '@mui/material'
 import {MouseEventHandler, ReactElement, useCallback} from 'react'
-import {STYLES_POLICY} from '../../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../../styles/styles.policy';
 
 
 export const LineRecordAtom = ({

@@ -1,5 +1,5 @@
 import {freezeThreadAndWait} from '@msalek/utils'
-import {Button, Stack, TextField, Typography} from '@mui/material'
+import {Box, Button, Stack, TextField, Typography} from '@mui/material'
 import CircularProgress from '@mui/material/CircularProgress'
 import {FormEvent, ReactNode, useCallback, useEffect, useMemo, useState} from 'react'
 import {DataPassedBetweenViewsConfig} from '../../../application/data-between-views/dataBetweenViews.config'
@@ -13,6 +13,7 @@ import {
   deleteFromClientStorage,
   getFromClientStorage
 } from '../../../application/client-device-storage/clientStorage.possibilities.api';
+import {STYLES_POLICY} from '../../../UI/styles/styles.policy';
 
 
 export default function Register() {
@@ -91,7 +92,9 @@ export default function Register() {
 
 
   return (
-    <>
+    <Box sx={{
+      padding: STYLES_POLICY.spacing[3]
+    }}>
 
       <Stack sx={{py: 3}}>
 
@@ -115,7 +118,7 @@ export default function Register() {
 
       </Stack>
 
-    </>)
+    </Box>)
 }
 
 

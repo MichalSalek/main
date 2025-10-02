@@ -1,5 +1,5 @@
-import { CSSProperties } from 'react'
-import { STYLES_POLICY } from '../../../../../READONLY-shared-kernel/policies/styles.policy'
+import {CSSProperties} from 'react'
+import {STYLES_POLICY} from '../../../../styles/styles.policy'
 
 export const clickableElementCss: CSSProperties = {
   width: '100%',

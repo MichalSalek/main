@@ -1,10 +1,9 @@
-import {ButtonGroup, Paper, Stack, Typography} from '@mui/material'
-import {useRouter} from 'next/router'
+import {Box, ButtonGroup, Paper, Stack, Typography} from '@mui/material'
 import {useAppSelector} from '../application/store/store'
 import {STORE_SEL_user_currentUser} from '../domain/user/user.read'
 import {ROUTES_FRONT} from '../READONLY-shared-kernel/domain/routing/routing.config'
 import {LinkAtom} from '../UI/building-blocks/_wide-use-components/Link.atom'
-
+import {STYLES_POLICY} from '../UI/styles/styles.policy';
 
 
 export default function Home() {
@@ -12,7 +11,9 @@ export default function Home() {
   const currentUser = useAppSelector(STORE_SEL_user_currentUser)
 
   return (
-    <>
+    <Box sx={{
+      padding: STYLES_POLICY.spacing[3]
+    }}>
 
       <Typography variant={'h1'}>
         Portfolio usług kosmetycznych
@@ -78,7 +79,7 @@ export default function Home() {
         </Paper>}
 
 
-    </>)
+    </Box>)
 }
 
 

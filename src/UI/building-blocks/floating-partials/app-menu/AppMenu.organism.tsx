@@ -4,7 +4,7 @@ import {ReactElement, useCallback} from 'react'
 import {theme} from '../../../styles/theme';
 import {DrawerOrganism} from './drawer/Drawer.organism';
 import {DynamicMenuActionButtonsMolecule} from './DynamicMenuActionButtons.molecule';
-import {STYLES_POLICY} from '../../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../../styles/styles.policy';
 import {getAppIcon} from '../../../../domain/app-icons/adapters/MuiIcons.adapter';
 import {redirectToAction} from '../../../../domain/redirections-and-routing/redirections.operations.api';
 import {ROUTES_FRONT} from '../../../../READONLY-shared-kernel/domain/routing/routing.config';
@@ -33,7 +33,8 @@ export const AppMenuOrganism = (): ReactElement => {
 
       borderTop: `2px solid ${theme.palette.divider}`,
       justifyContent: 'space-between',
-      height: STYLES_POLICY.appBarDimension
+      height: STYLES_POLICY.appBarDimension,
+      zIndex: theme.zIndex.drawer + 1,
     }}>
 
     <Container sx={{
@@ -44,7 +45,8 @@ export const AppMenuOrganism = (): ReactElement => {
       <Button
         sx={{
           minWidth: STYLES_POLICY.appBarDimension,
-          flex: 1
+          flex: 1,
+          visibility: 'hidden', // @TODO ukryty przycisk home, do rozpatrzenia
         }}
         variant={'outlined'}
         onClick={onClickHomeCallback}

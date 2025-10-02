@@ -9,7 +9,7 @@ export const useSetLoadingIcon = () => {
     setActionButtons([{
       title: 'W TOKU',
       action: () => undefined,
-      icon: getAppIcon.Loading()
+      icon: getAppIcon.Loading
     }])
   }, [setActionButtons])
 }

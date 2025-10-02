@@ -22,9 +22,9 @@ export const useLoadImageHook = ({onLoadAction}: Props) => {
 
   const setLoadingIcon = useSetLoadingIcon()
 
-  const [loadedImageSrc, setLoadedImageSrc] = useState<string | null>(null)
+  const [loadedImageSrc, setLoadedImageSrc] = useState<string | undefined>()
 
-  const clearLoadedImage = useCallback(() => setLoadedImageSrc(null), [])
+  const clearLoadedImage = useCallback(() => setLoadedImageSrc(undefined), [])
 
   const onLoadImage = (event: ChangeEvent<HTMLInputElement>) => {
     turnOnAppBusyLoader()

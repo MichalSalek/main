@@ -1,5 +1,5 @@
 import {freezeThreadAndWait} from '@msalek/utils'
-import {Button, Stack, Typography} from '@mui/material'
+import {Box, Button, Stack, Typography} from '@mui/material'
 import CircularProgress from '@mui/material/CircularProgress'
 import {FormEvent, ReactNode, useCallback, useEffect, useState} from 'react'
 import {DataPassedBetweenViewsConfig} from '../../../application/data-between-views/dataBetweenViews.config'
@@ -10,6 +10,7 @@ import {EmailInputAtom} from '../../../UI/building-blocks/_wide-use-components/E
 import {ConditionalButtonAtom} from '../../../UI/building-blocks/_wide-use-components/ConditionalButton.atom';
 import {VALIDATION_POLICY} from '../../../READONLY-shared-kernel/policies/validation.policy';
 import {setToClientStorage} from '../../../application/client-device-storage/clientStorage.possibilities.api';
+import {STYLES_POLICY} from '../../../UI/styles/styles.policy';
 
 
 export default function Register() {
@@ -100,7 +101,9 @@ export default function Register() {
     [emailForm])
 
   return (
-    <>
+    <Box sx={{
+      padding: STYLES_POLICY.spacing[3]
+    }}>
 
       <Stack sx={{py: 3}}>
 
@@ -138,7 +141,7 @@ export default function Register() {
 
       </Stack>
 
-    </>)
+    </Box>)
 }
 
 

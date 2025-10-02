@@ -1,4 +1,4 @@
-import {Button, Stack, TextField, Typography} from '@mui/material'
+import {Box, Button, Stack, TextField, Typography} from '@mui/material'
 import {FormEvent, startTransition, useCallback, useEffect, useState} from 'react'
 import {DataPassedBetweenViewsConfig} from '../../application/data-between-views/dataBetweenViews.config'
 import {redirectToAction} from '../../domain/redirections-and-routing/redirections.operations.api'
@@ -9,6 +9,7 @@ import {ConditionalButtonAtom} from '../../UI/building-blocks/_wide-use-componen
 import {VALIDATION_POLICY} from '../../READONLY-shared-kernel/policies/validation.policy';
 import {setToClientStorage} from '../../application/client-device-storage/clientStorage.possibilities.api';
 import {MASTER_ADMIN_EMAIL} from '../../READONLY-shared-kernel/domain/admin/admin.config';
+import {STYLES_POLICY} from '../../UI/styles/styles.policy';
 
 
 export default function Login() {
@@ -79,7 +80,9 @@ export default function Login() {
     [emailValue])
 
   return (
-    <>
+    <Box sx={{
+      padding: STYLES_POLICY.spacing[3]
+    }}>
 
       <Typography variant={'h1'}>
         Zaloguj się do aplikacji i wykorzystaj potencjał swoich usług.
@@ -122,7 +125,7 @@ export default function Login() {
         Zaloguj demo admina
       </Button>
 
-    </>)
+    </Box>)
 }
 
 

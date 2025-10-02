@@ -1,12 +1,11 @@
 import {Theme} from '@mui/material'
 import {CSSProperties} from 'react'
 import {createTheme} from '@mui/material/styles'
-import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy'
+import {STYLES_POLICY} from './styles.policy'
 
 
 const headingGenericStyle: CSSProperties = {
-  color: STYLES_POLICY.accentColor[0],
-  fontWeight: 'bold'
+  color: STYLES_POLICY.accentColor[0]
 }
 
 export const theme: Theme = createTheme({
@@ -23,6 +22,9 @@ export const theme: Theme = createTheme({
     warning: {
       main: STYLES_POLICY.statusColors[2]
     },
+    info: {
+      main: STYLES_POLICY.statusColors[3]
+    },
     background: {
       default: STYLES_POLICY.backgroundColor[0],
       paper: STYLES_POLICY.backgroundColor[1]
@@ -37,13 +39,14 @@ export const theme: Theme = createTheme({
     },
     h2: {
       ...headingGenericStyle,
-      fontSize: STYLES_POLICY.fontSize[3]
+      fontSize: STYLES_POLICY.fontSize[3],
+      marginBottom: STYLES_POLICY.spacing[2],
     },
     h3: {
       ...headingGenericStyle,
       fontSize: STYLES_POLICY.fontSize[2],
       marginBottom: STYLES_POLICY.spacing[2],
-      marginTop: STYLES_POLICY.spacing[1]
+      marginTop: STYLES_POLICY.spacing[1],
     },
     body1: {
       fontSize: STYLES_POLICY.fontSize[1]
@@ -52,10 +55,9 @@ export const theme: Theme = createTheme({
       fontSize: STYLES_POLICY.fontSize[0]
     },
     caption: {
-      lineHeight: '1.25',
+      lineHeight: '1',
       paddingTop: STYLES_POLICY.spacing[0],
       paddingBottom: STYLES_POLICY.spacing[0],
-      fontWeight: 'bold',
       textTransform: 'uppercase'
     },
     subtitle2: {
@@ -100,7 +102,7 @@ export const theme: Theme = createTheme({
           borderRadius: STYLES_POLICY.borderRadius[2],
           margin: STYLES_POLICY.spacing[1],
           minHeight: '30px',
-          minWidth: '80px',
+          minWidth: 0,
           lineHeight: 'normal'
         }
       }
@@ -112,7 +114,6 @@ export const theme: Theme = createTheme({
       styleOverrides: {
         root: {
           padding: STYLES_POLICY.spacing[2],
-          maxWidth: 'fit-content',
           borderRadius: 0,
           borderColor: STYLES_POLICY.contourColor[0]
         }
@@ -196,6 +197,9 @@ export const theme: Theme = createTheme({
       }
     },
     MuiChip: {
+      defaultProps: {
+        size: 'small'
+      },
       styleOverrides: {
         root: {
           borderRadius: '4px'
@@ -248,6 +252,44 @@ export const theme: Theme = createTheme({
       styleOverrides: {
         root: {
           padding: 0
+        }
+      }
+    },
+    MuiSkeleton: {
+      styleOverrides: {
+        root: {
+          animationDuration: '5s'
+        }
+      }
+    },
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          height: '2px'
+        }
+      }
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          padding: 0
+        }
+      }
+    },
+    MuiDialog: {
+      defaultProps: {
+        keepMounted: true,
+        fullScreen: true,
+        disableEscapeKeyDown: true,
+        disableScrollLock: true
+      }
+    },
+    MuiFab: {
+      styleOverrides: {
+        root: {
+          borderWidth: '1px',
+          borderStyle: 'solid',
+          borderColor: 'inherit'
         }
       }
     }

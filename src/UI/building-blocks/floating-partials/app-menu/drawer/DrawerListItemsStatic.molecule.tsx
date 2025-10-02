@@ -69,7 +69,6 @@ export const DrawerListItemsStatic = (): ReactElement => {
     </ListItem>
 
 
-
     <ListItem disablePadding>
 
       <LinkAtom passPropsToLink={{style: clickableElementCss}} omitButtonElement={true}
@@ -87,7 +86,6 @@ export const DrawerListItemsStatic = (): ReactElement => {
       </LinkAtom>
 
     </ListItem>
-
 
 
     <ListItem disablePadding>

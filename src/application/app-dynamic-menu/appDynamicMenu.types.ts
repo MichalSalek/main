@@ -1,7 +1,8 @@
-import {ReactNode} from 'react';
+import {JSX} from 'react';
+import {SvgIconOwnProps} from '@mui/material';
 
 export type AppDynamicMenuButton = {
   title: string
   action: () => void
-  icon: ReactNode
+  icon: (props?: SvgIconOwnProps) => JSX.Element
 }

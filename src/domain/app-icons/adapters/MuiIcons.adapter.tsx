@@ -32,6 +32,12 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 import QuestionAnswerOutlinedIcon from '@mui/icons-material/QuestionAnswerOutlined';
 import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
 import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import RestartAltSharpIcon from '@mui/icons-material/RestartAltSharp';
+import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
+import TouchAppTwoToneIcon from '@mui/icons-material/TouchAppTwoTone';
+import KeyboardDoubleArrowDownRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowDownRounded';
+import SearchTwoToneIcon from '@mui/icons-material/SearchTwoTone';
+import ClearTwoToneIcon from '@mui/icons-material/ClearTwoTone';
 
 
 export const getAppIcon = Object.freeze({
@@ -46,12 +52,19 @@ export const getAppIcon = Object.freeze({
   Photos: (props?: SvgIconOwnProps) => <CollectionsIcon {...props}/>,
   Crop: (props?: SvgIconOwnProps) => <CropRoundedIcon {...props}/>,
   Upload: (props?: SvgIconOwnProps) => <CloudUploadOutlinedIcon {...props}/>,
+  Restart: (props?: SvgIconOwnProps) => <RestartAltSharpIcon {...props}/>,
+  Edit: (props?: SvgIconOwnProps) => <EditTwoToneIcon {...props}/>,
+  Tap: (props?: SvgIconOwnProps) => <TouchAppTwoToneIcon {...props}/>,
+  Scrollable: (props?: SvgIconOwnProps) => <KeyboardDoubleArrowDownRoundedIcon {...props}/>,
+  Search: (props?: SvgIconOwnProps) => <SearchTwoToneIcon {...props}/>,
+  Clear: (props?: SvgIconOwnProps) => <ClearTwoToneIcon {...props}/>,
 
   Logout: (props?: SvgIconOwnProps) => <LogoutIcon {...props}/>,
   Notification: (props?: SvgIconOwnProps) => <NotificationsIcon {...props}/>,
   Loading: (props?: SvgIconOwnProps) => <HourglassTopRoundedIcon {...props}/>,
 
-  Account: (props?: SvgIconOwnProps & {variant?: 'contained'}) => props?.variant === 'contained' ? <AccountCircle {...props} /> : <AccountOutlinedCircleIcon {...props}/>,
+  Account: (props?: SvgIconOwnProps & { variant?: 'contained' }) => props?.variant === 'contained' ?
+    <AccountCircle {...props} /> : <AccountOutlinedCircleIcon {...props}/>,
   PricingPlan: (props?: SvgIconOwnProps) => <ShoppingCartCheckoutTwoToneIcon {...props}/>,
   Home: (props?: SvgIconOwnProps) => <HomeOutlinedIcon {...props}/>,
   Admin: (props?: SvgIconOwnProps) => <AdminPanelSettingsTwoToneIcon {...props}/>,
@@ -77,7 +90,7 @@ export const getAppIcon = Object.freeze({
   Error: (props?: SvgIconOwnProps) => <ReportIcon {...props} color={'error'}/>,
   Info: (props?: SvgIconOwnProps) => <InfoOutlineIcon {...props} color={'info'}/>,
 
-  Filter: (props?: SvgIconOwnProps) => <FilterAltTwoToneIcon {...props} color={'info'}/>,
+  Filter: (props?: SvgIconOwnProps) => <FilterAltTwoToneIcon {...props}/>,
 
 
 } as const)

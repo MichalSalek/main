@@ -2,7 +2,7 @@ import {Box, Button, SwipeableDrawer} from '@mui/material'
 import * as React from 'react'
 import {ReactElement, useCallback, useMemo, useState} from 'react'
 import {DrawerToggleMenu} from './drawer.types';
-import {STYLES_POLICY} from '../../../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../../../styles/styles.policy';
 import {getAppIcon} from '../../../../../domain/app-icons/adapters/MuiIcons.adapter';
 import {DrawerListContainer} from './DrawerListContainer.molecule';
 
@@ -64,6 +64,7 @@ export const DrawerOrganism = (): ReactElement => {
       disableDiscovery={iOS}
       swipeAreaWidth={0}
       disableScrollLock={true}
+
     >
 
       <DrawerListContainer toggleMenuCallback={toggleMenuCallback}/>

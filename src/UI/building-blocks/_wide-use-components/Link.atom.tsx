@@ -5,7 +5,7 @@ import {Button, ButtonProps} from '@mui/material'
 import {STORE_SEL_appLoaders_isViewLoading} from '../../../application/app-loaders/appLoaders.read';
 import {useAppSelector} from '../../../application/store/store';
 import scss from './atoms.module.scss'
-import {STYLES_POLICY} from '../../../READONLY-shared-kernel/policies/styles.policy';
+import {STYLES_POLICY} from '../../styles/styles.policy';
 import {getAppIcon} from '../../../domain/app-icons/adapters/MuiIcons.adapter';
 
 

@@ -27,7 +27,7 @@
 
 .viewLoaderVisible {
   pointer-events: none;
-  filter: blur(18px) saturate(300%);
+  filter: blur(22px) saturate(250%);
 
   &::before {
     opacity: 1;

@@ -24,7 +24,9 @@ export default function Account() {
 
 export async function getStaticProps() {
   return {
-    props: {}
+    props: {
+      title: 'Preferencje konta'
+    }
   }
 }
 

@@ -24,6 +24,7 @@ export const pushNewSnackbar = (input: string | EVENT_INFO_TYPE | undefined, col
     return void undefined
   }
 
+
   if (APP_SNACKBAR_STATE.lastSnackbarMemo === input) {
     return void undefined
   }

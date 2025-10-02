@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material'
+import {Box, Typography} from '@mui/material'
 import {useAppSelector} from '../../application/store/store'
 import {STORE_SEL_user_currentUser} from '../../domain/user/user.read'
 import {ROUTES_FRONT} from '../../READONLY-shared-kernel/domain/routing/routing.config'
@@ -6,6 +6,7 @@ import {USER_POLICY} from '../../READONLY-shared-kernel/policies/user.policy'
 import {LinkAtom} from '../../UI/building-blocks/_wide-use-components/Link.atom'
 import {getEnvironmentMode} from '../../application/environment/environment.utils.api';
 import {getRoleUI} from '../../UI/building-blocks/account-and-user-operations/userAndAccountUI.api';
+import {STYLES_POLICY} from '../../UI/styles/styles.policy';
 
 
 export default function Home() {
@@ -13,7 +14,9 @@ export default function Home() {
 
 
   return (
-    <>
+    <Box sx={{
+      padding: STYLES_POLICY.spacing[3]
+    }}>
       <Typography variant={'h3'}>
         środowisko: {getEnvironmentMode()}
       </Typography>
@@ -52,7 +55,7 @@ export default function Home() {
         </LinkAtom> : undefined
       }
 
-    </>)
+    </Box>)
 }
 
 

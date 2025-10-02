@@ -9,8 +9,8 @@ export type GALLERY_DTO_API_V1 = {
   CREATE_GALLERY_RECORD: {
     REQUEST: {
       asset_url: string
-      traits: Trait[]
-      color_traits: Trait[]
+      asset_traits: Trait[]
+      asset_color_traits: Trait[]
     }
     RESPONSE: undefined
     RESPONSE_ERROR: DetailedErrorPayload<GALLERY_DTO_API_V1['CREATE_GALLERY_RECORD']['REQUEST']>
@@ -38,8 +38,8 @@ export type GALLERY_DTO_API_V1 = {
 
   CREATE_TRAIT: {
     REQUEST: {
-      trait: Trait
-      color_trait: Trait
+      trait?: Trait
+      color_trait?: Trait
     }
     RESPONSE: undefined
     RESPONSE_ERROR: DetailedErrorPayload<GALLERY_DTO_API_V1['CREATE_TRAIT']['REQUEST']>

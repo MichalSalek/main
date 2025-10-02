@@ -2,80 +2,54 @@ import {ReactElement} from 'react'
 import {Container, Stack} from '@mui/material';
 import {BusyAppLoaderComposition} from './loaders/BusyAppLoader.composition';
 import {ViewLoaderComposition} from './loaders/ViewLoader.composition';
-import {AppDynamicMenuContext} from '../../application/app-dynamic-menu/appDynamicMenu.context';
-import {useAppDynamicMenuContext} from '../../application/app-dynamic-menu/useAppDynamicMenuContext.hook';
-import {AppMenuOrganism} from '../building-blocks/floating-partials/app-menu/AppMenu.organism';
-import {STYLES_POLICY} from '../../READONLY-shared-kernel/policies/styles.policy';
-import {GoBackAtom} from '../building-blocks/_wide-use-components/GoBack.atom';
+import {STYLES_POLICY} from '../styles/styles.policy';
+import {PagePropsWrapper} from '../../pages/_app';
+import {GoBackTitleBarOrganism} from '../building-blocks/floating-partials/GoBackTitleBar.organism';
 
 
 type Props = {
   children: ReactElement,
-}
+} & PagePropsWrapper
 
-export const AppComposition = ({children}: Props): ReactElement => {
-
-  const AppDynamicMenuContextValue = useAppDynamicMenuContext()
-
+export const AppComposition = ({children, pageProps}: Props): ReactElement => {
 
   return <Stack>
 
-    <AppDynamicMenuContext.Provider value={AppDynamicMenuContextValue}>
+    <Stack
+      sx={{
+        height: '100%'
+      }}>
 
       <Stack
+        component={'main'}
         sx={{
-          height: '100%'
+          flex: 1
         }}>
 
-        <Stack
-          component={'main'}
+        <Container
+          disableGutters
           sx={{
-            flex: 1
-          }}>
+            paddingBottom: `calc(${STYLES_POLICY.appBarDimension} + ${STYLES_POLICY.spacing[4]})`,
+            position: 'relative'
+          }}
+        >
 
-          <Container
-            sx={{
-              paddingTop: STYLES_POLICY.spacing[1],
-              paddingBottom: STYLES_POLICY.spacing[1],
-              position: 'relative'
-            }}
-          >
+          <BusyAppLoaderComposition>
+            <ViewLoaderComposition>
 
-            <BusyAppLoaderComposition>
-              <ViewLoaderComposition>
+              <GoBackTitleBarOrganism pageProps={pageProps}/>
 
-                <>
-
-                  <Stack sx={{
-                    position: 'sticky',
-                    right: 0,
-                    zIndex: 1,
-                    top: `calc(${STYLES_POLICY.appBarDimension} + ${STYLES_POLICY.spacing[1]})`,
-                    paddingBottom: STYLES_POLICY.spacing[2],
-                    marginLeft: 'auto',
-                    width: 'fit-content',
-                    flexDirection: 'row',
-                    justifyContent: 'flex-end'
-                  }}>
-                    <GoBackAtom/>
-                  </Stack>
+              {children}
 
 
-                  {children}
+            </ViewLoaderComposition>
+          </BusyAppLoaderComposition>
 
-
-                </>
-
-              </ViewLoaderComposition>
-            </BusyAppLoaderComposition>
-
-          </Container>
-
-        </Stack>
+        </Container>
 
       </Stack>
 
-    </AppDynamicMenuContext.Provider>
+    </Stack>
 
   </Stack>
 }
